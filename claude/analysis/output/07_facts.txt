@@ -1,0 +1,22 @@
+DATA  rows=215,795  phishing(label 1)=92,300 (42.77%)  legitimate(label 0)=123,495  columns=60  missing cells=0  duplicate URL ids=355  hosts=201,833
+RULE  'not a bare https://www homepage' -> phishing : accuracy 99.72%  caught 91,699/92,300  false alarms 0  missed 601
+RULE  'URLSimilarityIndex < 100' -> phishing        : accuracy 99.67%  false alarms 0  missed 713
+WHY   legit URLs with a path: 0 | legit on HTTPS: 100.00% vs phishing 49.23% | legit with similarity=100: 100.00%, phishing with 100: 713
+MODEL gbm_url            AUC 0.99888  accuracy 99.755%  caught(recall) 99.465%  precision 99.962%  false alarms 35  missed 494
+MODEL gbm_page           AUC 0.99996  accuracy 99.824%  caught(recall) 99.742%  precision 99.846%  false alarms 142  missed 238
+MODEL gbm_combined       AUC 1.00000  accuracy 99.994%  caught(recall) 99.990%  precision 99.995%  false alarms 5  missed 9
+MODEL logit_combined     AUC 0.99999  accuracy 99.983%  caught(recall) 99.971%  precision 99.989%  false alarms 10  missed 27
+MODEL tree_d3_combined   AUC 0.99094  accuracy 98.898%  caught(recall) 98.905%  precision 98.526%  false alarms 1366  missed 1011
+SCORE 5-point footprint check AUC 0.9886 | phishing rate by markers present: 0:99.517% (n=65,389)  1:87.082% (n=25,693)  2:22.183% (n=17,450)  3:2.783% (n=32,812)  4:0.149% (n=45,744)  5:0.003% (n=28,707)
+MARKS Links to social media: legit 79.5% vs phishing 0.5% | Copyright notice: legit 80.8% vs phishing 5.7% | Meta description: legit 73.6% vs phishing 4.4% | Title matches the domain: legit 75.8% vs phishing 16.5% | Favicon: legit 56.7% vs phishing 8.8% | Submit button: legit 66.1% vs phishing 8.5% | Mobile-responsive: legit 85.4% vs phishing 31.7% | HTTPS padlock: legit 100.0% vs phishing 49.2% | Password field: legit 13.8% vs phishing 5.4% | Mentions payment ('Pay'): legit 36.9% vs phishing 6.0% | Mentions 'Bank': legit 18.1% vs phishing 5.5% | Has a page title: legit 99.9% vs phishing 67.7%
+COPY  page structure (26 features) shared with >=2 hosts: phishing 86.6% vs legit 0.16% | >=10: 71.7% vs 0.002% | >=100: 47.2% | >=1000: 19.2%
+COPY  most-copied page: 5,592 pages on 5,554 hosts | top-100 templates cover 48.8% of phishing | seen-before rule: caught 72,085 (78.1%), false alarms 2
+STRESS page      99.72%  ->  99.72%  ->  93.44%  ->  0.48%  ->  0.09%
+STRESS combined  100.00%  ->  99.82%  ->  99.51%  ->  48.08%  ->  46.98%
+STRESS url       99.53%  ->  84.01%  ->  84.01%  ->  84.01%  ->  84.01%
+STRESS either    100.00%  ->  99.84%  ->  99.62%  ->  80.64%  ->  80.62%
+SHAP  share of model evidence: page 69.4% / URL 30.6%; top 5: LineOfCode, NoOfSelfRef, NoOfExternalRef, IsHTTPS, NoOfImage
+POLISH phishing with >=3 of 5 trust markers: 982 (1.06%); page-model miss rate 8.15% vs 0.19% for the rest (43x)
+LAYER 1 URL score before the click: caught 91,722 (99.37%), false alarms 13 (0.011%) | 2 seen-before page: +436 (false alarms 2) | 3 page model: +138 (false alarms 5) | still missed 4 | precision of layer 1 at 1-in-1,000 prevalence 90.4%
+BASE  URL model at 0.1% false-alarm rate: precision at 1% prevalence 91.2%, at 0.1% prevalence 50.6%
+TLD   25 TLD groups are >=90% phishing: flagging them catches 28.2% at precision 97.2% (748 legit hit)

@@ -1,0 +1,189 @@
+shape: (215795, 60)
+
+COLUMNS:
+                           col    dtype  nunique  n_na  n_empty                                                                                                                          examples
+0               URL_Anonymized      str   215440     0        0  [https://ass.uvlpsmvdmjvwuqhxelejimhribcxfmvxvkj.9to.wpol.ee/, https://fpc.mxvkdu.cymnwyt.ps.nb, https://haa.tqrkyokajvxhtp.nfb]
+1                       URL_ID      str   215440     0        0                                                                                              [url_000001, url_000002, url_000003]
+2                    URLLength  float64      473     0        0                                                                                                                [60.0, 31.0, 29.0]
+3            Domain_Anonymized      str   201833     0        0                           [eub.jvahlchiudvwfebcmtvbvjcgfpocrjkwlsa.7vj.wizr.sb, wyb.glwrgq.fsqnsjs.sh.al, rtc.okpsihkxtewubt.wuv]
+4                    Domain_ID      str   201833     0        0                                                                                     [domain_000001, domain_000002, domain_000003]
+5                 DomainLength  float64      101     0        0                                                                                                                [51.0, 24.0, 22.0]
+6                   IsDomainIP  float64        2     0        0                                                                                                                   [0.0, 0.0, 0.0]
+7               TLD_Anonymized      str      638     0        0                                                                                                                     [zf, rj, ose]
+8                    TLD_Group      str      680     0        0                                                                                     [tld_group_001, tld_group_002, tld_group_003]
+9           URLSimilarityIndex  float64    34305     0        0                                                                                                         [23.558926, 100.0, 100.0]
+10        CharContinuationRate  float64      888     0        0                                                                                                         [0.840909, 0.470588, 1.0]
+11           TLDLegitimateProb  float64      461     0        0                                                                                                     [0.00005, 0.012178, 0.522907]
+12                 URLCharProb  float64   208746     0        0                                                                                                     [0.058363, 0.068778, 0.05746]
+13                   TLDLength  float64       12     0        0                                                                                                                   [2.0, 2.0, 3.0]
+14               NoOfSubDomain  float64       10     0        0                                                                                                                   [3.0, 3.0, 1.0]
+15              HasObfuscation  float64        2     0        0                                                                                                                   [0.0, 0.0, 0.0]
+16          NoOfObfuscatedChar  float64       19     0        0                                                                                                                   [0.0, 0.0, 0.0]
+17            ObfuscationRatio  float64      140     0        0                                                                                                                   [0.0, 0.0, 0.0]
+18            NoOfLettersInURL  float64      413     0        0                                                                                                                [43.0, 16.0, 16.0]
+19            LetterRatioInURL  float64      703     0        0                                                                                                             [0.717, 0.516, 0.552]
+20             NoOfDegitsInURL  float64      174     0        0                                                                                                                   [1.0, 0.0, 0.0]
+21             DegitRatioInURL  float64      569     0        0                                                                                                                 [0.017, 0.0, 0.0]
+22             NoOfEqualsInURL  float64       25     0        0                                                                                                                   [0.0, 0.0, 0.0]
+23              NoOfQMarkInURL  float64        5     0        0                                                                                                                   [0.0, 0.0, 0.0]
+24          NoOfAmpersandInURL  float64       30     0        0                                                                                                                   [0.0, 0.0, 0.0]
+25  NoOfOtherSpecialCharsInURL  float64       72     0        0                                                                                                                   [4.0, 3.0, 1.0]
+26       SpacialCharRatioInURL  float64      238     0        0                                                                                                             [0.067, 0.097, 0.034]
+27                     IsHTTPS  float64        2     0        0                                                                                                                   [1.0, 1.0, 1.0]
+28                  LineOfCode  float64    10382     0        0                                                                                                            [57.0, 1509.0, 3329.0]
+29           LargestLineLength  float64    25193     0        0                                                                                                          [128.0, 9381.0, 11752.0]
+30                    HasTitle  float64        2     0        0                                                                                                                   [1.0, 1.0, 1.0]
+31            Title_Anonymized      str   181194     0        0                                                     [vxkonryfzwtsbmdrxddrlaqspiaeqoybqxv4diazub, jugzbepkdjdnaqw, fzexotdlogveuw]
+32                    Title_ID      str   181440     0        0                                                                                        [title_000001, title_000002, title_000003]
+33       DomainTitleMatchScore  float64      151     0        0                                                                                                                 [0.0, 0.0, 100.0]
+34          URLTitleMatchScore  float64      480     0        0                                                                                                                 [0.0, 0.0, 100.0]
+35                  HasFavicon  float64        2     0        0                                                                                                                   [0.0, 1.0, 1.0]
+36                      Robots  float64        2     0        0                                                                                                                   [0.0, 1.0, 1.0]
+37                IsResponsive  float64        2     0        0                                                                                                                   [1.0, 1.0, 1.0]
+38             NoOfURLRedirect  float64        2     0        0                                                                                                                   [0.0, 0.0, 0.0]
+39            NoOfSelfRedirect  float64        2     0        0                                                                                                                   [0.0, 0.0, 0.0]
+40              HasDescription  float64        2     0        0                                                                                                                   [1.0, 0.0, 1.0]
+41                   NoOfPopup  float64      111     0        0                                                                                                                   [0.0, 0.0, 0.0]
+42                  NoOfiFrame  float64      113     0        0                                                                                                                   [0.0, 0.0, 2.0]
+43       HasExternalFormSubmit  float64        2     0        0                                                                                                                   [0.0, 1.0, 0.0]
+44                HasSocialNet  float64        2     0        0                                                                                                                   [0.0, 1.0, 1.0]
+45             HasSubmitButton  float64        2     0        0                                                                                                                   [1.0, 1.0, 0.0]
+46             HasHiddenFields  float64        2     0        0                                                                                                                   [1.0, 0.0, 0.0]
+47            HasPasswordField  float64        2     0        0                                                                                                                   [1.0, 0.0, 0.0]
+48                        Bank  float64        2     0        0                                                                                                                   [0.0, 0.0, 0.0]
+49                         Pay  float64        2     0        0                                                                                                                   [0.0, 0.0, 0.0]
+50                      Crypto  float64        2     0        0                                                                                                                   [0.0, 0.0, 0.0]
+51            HasCopyrightInfo  float64        2     0        0                                                                                                                   [0.0, 1.0, 0.0]
+52                   NoOfImage  float64      960     0        0                                                                                                                 [2.0, 30.0, 77.0]
+53                     NoOfCSS  float64      206     0        0                                                                                                                  [1.0, 12.0, 1.0]
+54                      NoOfJS  float64      246     0        0                                                                                                                  [0.0, 22.0, 6.0]
+55                 NoOfSelfRef  float64     1327     0        0                                                                                                               [0.0, 179.0, 227.0]
+56                NoOfEmptyRef  float64      289     0        0                                                                                                                   [0.0, 0.0, 3.0]
+57             NoOfExternalRef  float64     1157     0        0                                                                                                               [0.0, 214.0, 300.0]
+58                    Phishing  float64        2     0        0                                                                                                                   [1.0, 0.0, 0.0]
+59              Classification      str        2     0        0                                                                                                [Phishing, Legitimate, Legitimate]
+
+LABEL-LIKE columns value counts:
+Phishing
+0.0    123495
+1.0     92300
+Name: count, dtype: int64
+
+NUMERIC describe:
+                               count          mean            std        min         1%         25%          50%          75%            99%           max
+URLLength                   215795.0     34.535184      39.859248  13.000000  17.000000   23.000000    27.000000    34.000000     143.000000  5.794000e+03
+DomainLength                215795.0     21.469446       9.151091   4.000000   8.000000   16.000000    20.000000    24.000000      57.000000  1.100000e+02
+IsDomainIP                  215795.0      0.002660       0.051506   0.000000   0.000000    0.000000     0.000000     0.000000       0.000000  1.000000e+00
+URLSimilarityIndex          215795.0     78.457667      28.965409   0.155574   8.298671   57.115010   100.000000   100.000000     100.000000  1.000000e+02
+CharContinuationRate        215795.0      0.845649       0.216521   0.000000   0.250000    0.680000     1.000000     1.000000       1.000000  1.000000e+00
+TLDLegitimateProb           215795.0      0.260466       0.251601   0.000000   0.000037    0.005977     0.079963     0.522907       0.522907  5.229071e-01
+URLCharProb                 215795.0      0.055756       0.010584   0.001083   0.022878    0.050761     0.057975     0.062883       0.073791  9.082366e-02
+TLDLength                   215795.0      2.764554       0.599233   2.000000   2.000000    2.000000     3.000000     3.000000       4.000000  1.300000e+01
+NoOfSubDomain               215795.0      1.164902       0.601470   0.000000   0.000000    1.000000     1.000000     1.000000       3.000000  1.000000e+01
+HasObfuscation              215795.0      0.002058       0.045313   0.000000   0.000000    0.000000     0.000000     0.000000       0.000000  1.000000e+00
+NoOfObfuscatedChar          215795.0      0.025135       1.950640   0.000000   0.000000    0.000000     0.000000     0.000000       0.000000  4.470000e+02
+ObfuscationRatio            215795.0      0.000137       0.003777   0.000000   0.000000    0.000000     0.000000     0.000000       0.000000  3.480000e-01
+NoOfLettersInURL            215795.0     19.398828      27.278471   0.000000   4.000000   10.000000    14.000000    20.000000      99.000000  4.992000e+03
+LetterRatioInURL            215795.0      0.515939       0.123277   0.000000   0.231000    0.435000     0.519000     0.594000       0.786000  9.260000e-01
+NoOfDegitsInURL             215795.0      1.873398      12.022699   0.000000   0.000000    0.000000     0.000000     0.000000      27.000000  2.011000e+03
+DegitRatioInURL             215795.0      0.028572       0.070760   0.000000   0.000000    0.000000     0.000000     0.000000       0.339000  6.840000e-01
+NoOfEqualsInURL             215795.0      0.062351       0.960864   0.000000   0.000000    0.000000     0.000000     0.000000       2.000000  1.760000e+02
+NoOfQMarkInURL              215795.0      0.029380       0.193187   0.000000   0.000000    0.000000     0.000000     0.000000       1.000000  4.000000e+00
+NoOfAmpersandInURL          215795.0      0.025042       0.856056   0.000000   0.000000    0.000000     0.000000     0.000000       0.000000  1.490000e+02
+NoOfOtherSpecialCharsInURL  215795.0      2.338882       3.572905   0.000000   1.000000    1.000000     1.000000     3.000000      13.000000  4.990000e+02
+SpacialCharRatioInURL       215795.0      0.063286       0.032368   0.000000   0.027000    0.038000     0.050000     0.083000       0.158000  3.970000e-01
+IsHTTPS                     215795.0      0.782863       0.412297   0.000000   0.000000    1.000000     1.000000     1.000000       1.000000  1.000000e+00
+LineOfCode                  215795.0   1140.546908    3470.638518   2.000000   2.000000   18.000000   430.000000  1277.000000   10337.180000  4.426660e+05
+LargestLineLength           215795.0  12912.019593  155872.741581  22.000000  30.000000  200.000000  1090.000000  8047.000000  131403.040000  1.397573e+07
+HasTitle                    215795.0      0.861299       0.345635   0.000000   0.000000    1.000000     1.000000     1.000000       1.000000  1.000000e+00
+DomainTitleMatchScore       215795.0     50.167880      49.679040   0.000000   0.000000    0.000000    75.000000   100.000000     100.000000  1.000000e+02
+URLTitleMatchScore          215795.0     52.151182      49.601621   0.000000   0.000000    0.000000   100.000000   100.000000     100.000000  1.000000e+02
+HasFavicon                  215795.0      0.361806       0.480524   0.000000   0.000000    0.000000     0.000000     1.000000       1.000000  1.000000e+00
+Robots                      215795.0      0.266647       0.442207   0.000000   0.000000    0.000000     0.000000     1.000000       1.000000  1.000000e+00
+IsResponsive                215795.0      0.624449       0.484266   0.000000   0.000000    0.000000     1.000000     1.000000       1.000000  1.000000e+00
+NoOfURLRedirect             215795.0      0.133224       0.339817   0.000000   0.000000    0.000000     0.000000     0.000000       1.000000  1.000000e+00
+NoOfSelfRedirect            215795.0      0.040140       0.196288   0.000000   0.000000    0.000000     0.000000     0.000000       1.000000  1.000000e+00
+HasDescription              215795.0      0.440149       0.496406   0.000000   0.000000    0.000000     0.000000     1.000000       1.000000  1.000000e+00
+NoOfPopup                   215795.0      0.225158       3.977868   0.000000   0.000000    0.000000     0.000000     0.000000       4.000000  6.020000e+02
+NoOfiFrame                  215795.0      1.586394       5.815246   0.000000   0.000000    0.000000     0.000000     1.000000      21.000000  1.602000e+03
+HasExternalFormSubmit       215795.0      0.044005       0.205106   0.000000   0.000000    0.000000     0.000000     0.000000       1.000000  1.000000e+00
+HasSocialNet                215795.0      0.457087       0.498156   0.000000   0.000000    0.000000     0.000000     1.000000       1.000000  1.000000e+00
+HasSubmitButton             215795.0      0.414806       0.492690   0.000000   0.000000    0.000000     0.000000     1.000000       1.000000  1.000000e+00
+HasHiddenFields             215795.0      0.378239       0.484949   0.000000   0.000000    0.000000     0.000000     1.000000       1.000000  1.000000e+00
+HasPasswordField            215795.0      0.102287       0.303026   0.000000   0.000000    0.000000     0.000000     0.000000       1.000000  1.000000e+00
+Bank                        215795.0      0.126986       0.332958   0.000000   0.000000    0.000000     0.000000     0.000000       1.000000  1.000000e+00
+Pay                         215795.0      0.236910       0.425188   0.000000   0.000000    0.000000     0.000000     0.000000       1.000000  1.000000e+00
+Crypto                      215795.0      0.023504       0.151497   0.000000   0.000000    0.000000     0.000000     0.000000       1.000000  1.000000e+00
+HasCopyrightInfo            215795.0      0.486869       0.499829   0.000000   0.000000    0.000000     0.000000     1.000000       1.000000  1.000000e+00
+NoOfImage                   215795.0     26.036952      79.252749   0.000000   0.000000    0.000000     9.000000    29.000000     243.000000  8.956000e+03
+NoOfCSS                     215795.0      6.343502      78.181646   0.000000   0.000000    0.000000     2.000000     7.000000      51.000000  3.582000e+04
+NoOfJS                      215795.0     10.531027      22.836230   0.000000   0.000000    0.000000     6.000000    15.000000      64.000000  6.957000e+03
+NoOfSelfRef                 215795.0     64.992243     174.623862   0.000000   0.000000    0.000000    12.000000    88.000000     514.000000  2.739700e+04
+NoOfEmptyRef                215795.0      2.396214      18.127793   0.000000   0.000000    0.000000     0.000000     1.000000      31.000000  4.887000e+03
+NoOfExternalRef             215795.0     49.225964     158.611860   0.000000   0.000000    1.000000    10.000000    58.000000     421.000000  2.751600e+04
+Phishing                    215795.0      0.427721       0.494749   0.000000   0.000000    0.000000     0.000000     1.000000       1.000000  1.000000e+00
+
+HEAD(5) transposed:
+                                                                                       0                                 1                               2                        3                                                                           4
+URL_Anonymized              https://ass.uvlpsmvdmjvwuqhxelejimhribcxfmvxvkj.9to.wpol.ee/  https://fpc.mxvkdu.cymnwyt.ps.nb  https://haa.tqrkyokajvxhtp.nfb  https://ilz.otzuyuef.uf  https://bfkacfak-efdei-gpkt.cthnpd.et/yvijo.nap?/khh.b.kvhxt.atih/kqjw.kcf
+URL_ID                                                                        url_000001                        url_000002                      url_000003               url_000004                                                                  url_000005
+URLLength                                                                           60.0                              31.0                            29.0                     22.0                                                                        74.0
+Domain_Anonymized                    eub.jvahlchiudvwfebcmtvbvjcgfpocrjkwlsa.7vj.wizr.sb          wyb.glwrgq.fsqnsjs.sh.al          rtc.okpsihkxtewubt.wuv          vjn.ehhoskfr.mb                                               jpkcmaqb-itgdl-dmnm.yyoosj.nv
+Domain_ID                                                                  domain_000001                     domain_000002                   domain_000003            domain_000004                                                               domain_000005
+DomainLength                                                                        51.0                              24.0                            22.0                     15.0                                                                        29.0
+IsDomainIP                                                                           0.0                               0.0                             0.0                      0.0                                                                         0.0
+TLD_Anonymized                                                                        zf                                rj                             ose                       gr                                                                          fy
+TLD_Group                                                                  tld_group_001                     tld_group_002                   tld_group_003            tld_group_004                                                               tld_group_005
+URLSimilarityIndex                                                             23.558926                             100.0                           100.0                    100.0                                                                   18.602579
+CharContinuationRate                                                            0.840909                          0.470588                             1.0                      1.0                                                                    0.346154
+TLDLegitimateProb                                                                0.00005                          0.012178                        0.522907                 0.002294                                                                    0.003638
+URLCharProb                                                                     0.058363                          0.068778                         0.05746                 0.056222                                                                    0.052225
+TLDLength                                                                            2.0                               2.0                             3.0                      2.0                                                                         2.0
+NoOfSubDomain                                                                        3.0                               3.0                             1.0                      1.0                                                                         1.0
+HasObfuscation                                                                       0.0                               0.0                             0.0                      0.0                                                                         0.0
+NoOfObfuscatedChar                                                                   0.0                               0.0                             0.0                      0.0                                                                         0.0
+ObfuscationRatio                                                                     0.0                               0.0                             0.0                      0.0                                                                         0.0
+NoOfLettersInURL                                                                    43.0                              16.0                            16.0                      9.0                                                                        53.0
+LetterRatioInURL                                                                   0.717                             0.516                           0.552                    0.409                                                                       0.716
+NoOfDegitsInURL                                                                      1.0                               0.0                             0.0                      0.0                                                                         0.0
+DegitRatioInURL                                                                    0.017                               0.0                             0.0                      0.0                                                                         0.0
+NoOfEqualsInURL                                                                      0.0                               0.0                             0.0                      0.0                                                                         0.0
+NoOfQMarkInURL                                                                       0.0                               0.0                             0.0                      0.0                                                                         1.0
+NoOfAmpersandInURL                                                                   0.0                               0.0                             0.0                      0.0                                                                         0.0
+NoOfOtherSpecialCharsInURL                                                           4.0                               3.0                             1.0                      1.0                                                                        12.0
+SpacialCharRatioInURL                                                              0.067                             0.097                           0.034                    0.045                                                                       0.176
+IsHTTPS                                                                              1.0                               1.0                             1.0                      1.0                                                                         1.0
+LineOfCode                                                                          57.0                            1509.0                          3329.0                   1020.0                                                                        82.0
+LargestLineLength                                                                  128.0                            9381.0                         11752.0                    570.0                                                                       155.0
+HasTitle                                                                             1.0                               1.0                             1.0                      1.0                                                                         1.0
+Title_Anonymized                              vxkonryfzwtsbmdrxddrlaqspiaeqoybqxv4diazub                   jugzbepkdjdnaqw                  fzexotdlogveuw                 rrxdfhdw                      glduyeae-mflqt-tgwmtphgkytshmazst?hkoimnaksffwgearcuwn
+Title_ID                                                                    title_000001                      title_000002                    title_000003             title_000004                                                                title_000005
+DomainTitleMatchScore                                                                0.0                               0.0                           100.0                    100.0                                                                         0.0
+URLTitleMatchScore                                                                   0.0                               0.0                           100.0                    100.0                                                                         0.0
+HasFavicon                                                                           0.0                               1.0                             1.0                      0.0                                                                         0.0
+Robots                                                                               0.0                               1.0                             1.0                      0.0                                                                         0.0
+IsResponsive                                                                         1.0                               1.0                             1.0                      1.0                                                                         1.0
+NoOfURLRedirect                                                                      0.0                               0.0                             0.0                      0.0                                                                         0.0
+NoOfSelfRedirect                                                                     0.0                               0.0                             0.0                      0.0                                                                         0.0
+HasDescription                                                                       1.0                               0.0                             1.0                      1.0                                                                         0.0
+NoOfPopup                                                                            0.0                               0.0                             0.0                      0.0                                                                         0.0
+NoOfiFrame                                                                           0.0                               0.0                             2.0                      0.0                                                                         0.0
+HasExternalFormSubmit                                                                0.0                               1.0                             0.0                      0.0                                                                         0.0
+HasSocialNet                                                                         0.0                               1.0                             1.0                      1.0                                                                         0.0
+HasSubmitButton                                                                      1.0                               1.0                             0.0                      0.0                                                                         0.0
+HasHiddenFields                                                                      1.0                               0.0                             0.0                      0.0                                                                         0.0
+HasPasswordField                                                                     1.0                               0.0                             0.0                      0.0                                                                         0.0
+Bank                                                                                 0.0                               0.0                             0.0                      1.0                                                                         0.0
+Pay                                                                                  0.0                               0.0                             0.0                      1.0                                                                         0.0
+Crypto                                                                               0.0                               0.0                             0.0                      0.0                                                                         0.0
+HasCopyrightInfo                                                                     0.0                               1.0                             0.0                      0.0                                                                         0.0
+NoOfImage                                                                            2.0                              30.0                            77.0                     11.0                                                                         1.0
+NoOfCSS                                                                              1.0                              12.0                             1.0                      7.0                                                                         1.0
+NoOfJS                                                                               0.0                              22.0                             6.0                      6.0                                                                         0.0
+NoOfSelfRef                                                                          0.0                             179.0                           227.0                     25.0                                                                         1.0
+NoOfEmptyRef                                                                         0.0                               0.0                             3.0                      1.0                                                                         0.0
+NoOfExternalRef                                                                      0.0                             214.0                           300.0                     27.0                                                                         2.0
+Phishing                                                                             1.0                               0.0                             0.0                      0.0                                                                         1.0
+Classification                                                                  Phishing                        Legitimate                      Legitimate               Legitimate                                                                    Phishing
+
+full-row duplicates: 0
