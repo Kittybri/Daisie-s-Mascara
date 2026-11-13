@@ -2,14 +2,20 @@
 
 A Chrome Manifest V3 extension that automatically checks webpages for phishing warning signs, entirely on your device. Results explain the observed clues and never certify a website as safe. A built-in dataset view presents the supplied workbook's analysis and all 60 original column names.
 
+## Presentation
+
+[**Open the presentation in Canva**](https://canva.link/h31ufynec0q7l70)
+
+[![TideCheck presentation cover — open the team presentation in Canva](presentations/slide-1.png)](https://canva.link/h31ufynec0q7l70)
+
+[Download the five-slide PowerPoint](presentations/tidecheck-digital-immune-system.pptx) · [View all five slide previews](presentations/README.md)
+
 ## Project materials
 
-- [Five-slide PowerPoint](presentations/tidecheck-digital-immune-system.pptx)
 - [Current extension ZIP](downloads/tidecheck-0.2.0.zip)
 - [Collective defense architecture](docs/architecture.md)
 - [Dataset findings](docs/data-findings.md) and [column guide](docs/columns.md)
 - [Unique domains and recurring phishing](docs/domain-analysis.md)
-- [Team presentation in Canva](https://canva.link/h31ufynec0q7l70)
 - [Team Datathon Google Doc](https://docs.google.com/document/d/17n__8UvPw7o6kC3np_9pIFKLs4UQWcSU7tEv2OW6HPE/edit?usp=sharing)
 
 The opt-in compute network, community index, and recursive improvement loop are proposed extensions to the current local scanner. The architecture and presentation distinguish the proposal from implemented features. The raw workbook and private validation logs are not distributed here.
