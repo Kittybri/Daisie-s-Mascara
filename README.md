@@ -14,6 +14,7 @@ A Chrome Manifest V3 extension that automatically checks webpages for phishing w
 
 - [Current extension ZIP](downloads/tidecheck-0.2.0.zip)
 - [Collective defense architecture](docs/architecture.md)
+- [Compute, blockchain, and token flow](docs/compute-and-token-flow.md)
 - [Dataset findings](docs/data-findings.md) and [column guide](docs/columns.md)
 - [Unique domains and recurring phishing](docs/domain-analysis.md)
 - [Team Datathon Google Doc](https://docs.google.com/document/d/17n__8UvPw7o6kC3np_9pIFKLs4UQWcSU7tEv2OW6HPE/edit?usp=sharing)
