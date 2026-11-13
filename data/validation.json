@@ -1,0 +1,565 @@
+{
+  "browser_observable_feature_associations": {
+    "HasExternalFormSubmit": {
+      "missing_or_invalid_values_on_valid_label_rows": {},
+      "phi_correlation_with_phishing": -0.1672138042701014,
+      "value_0": {
+        "accuracy": 0.46801825806900066,
+        "eligible_rows": 215795,
+        "false_negative": 400,
+        "false_positive": 114399,
+        "legitimate_false_positive_rate": 0.9263451961617879,
+        "matched_rows": 206299,
+        "phishing_recall": 0.9956663055254604,
+        "phishing_share_95pct_wilson_interval": [
+          0.4433262364921159,
+          0.44761564370253504
+        ],
+        "phishing_share_among_matches": 0.4454699247209148,
+        "specificity": 0.07365480383821207,
+        "true_negative": 9096,
+        "true_positive": 91900
+      },
+      "value_1": {
+        "accuracy": 0.5319817419309993,
+        "eligible_rows": 215795,
+        "false_negative": 91900,
+        "false_positive": 9096,
+        "legitimate_false_positive_rate": 0.07365480383821207,
+        "matched_rows": 9496,
+        "phishing_recall": 0.004333694474539545,
+        "phishing_share_95pct_wilson_interval": [
+          0.03826462564345944,
+          0.04635167688170739
+        ],
+        "phishing_share_among_matches": 0.04212299915754002,
+        "specificity": 0.9263451961617879,
+        "true_negative": 114399,
+        "true_positive": 400
+      }
+    },
+    "HasObfuscation": {
+      "missing_or_invalid_values_on_valid_label_rows": {},
+      "phi_correlation_with_phishing": 0.0525220749843971,
+      "value_0": {
+        "accuracy": 0.4256632452095739,
+        "eligible_rows": 215795,
+        "false_negative": 444,
+        "false_positive": 123495,
+        "legitimate_false_positive_rate": 1.0,
+        "matched_rows": 215351,
+        "phishing_recall": 0.9951895991332611,
+        "phishing_share_95pct_wilson_interval": [
+          0.42445334017799824,
+          0.4286309936327654
+        ],
+        "phishing_share_among_matches": 0.42654085655511237,
+        "specificity": 0.0,
+        "true_negative": 0,
+        "true_positive": 91856
+      },
+      "value_1": {
+        "accuracy": 0.5743367547904261,
+        "eligible_rows": 215795,
+        "false_negative": 91856,
+        "false_positive": 0,
+        "legitimate_false_positive_rate": 0.0,
+        "matched_rows": 444,
+        "phishing_recall": 0.004810400866738895,
+        "phishing_share_95pct_wilson_interval": [
+          0.9914222795924031,
+          0.9999999999999999
+        ],
+        "phishing_share_among_matches": 1.0,
+        "specificity": 1.0,
+        "true_negative": 123495,
+        "true_positive": 444
+      }
+    },
+    "HasPasswordField": {
+      "missing_or_invalid_values_on_valid_label_rows": {},
+      "phi_correlation_with_phishing": -0.1378600252574111,
+      "value_0": {
+        "accuracy": 0.4838434625454714,
+        "eligible_rows": 215795,
+        "false_negative": 4981,
+        "false_positive": 106403,
+        "legitimate_false_positive_rate": 0.8615976355318029,
+        "matched_rows": 193722,
+        "phishing_recall": 0.9460346695557963,
+        "phishing_share_95pct_wilson_interval": [
+          0.4485291477493645,
+          0.45296050455364756
+        ],
+        "phishing_share_among_matches": 0.45074384943372464,
+        "specificity": 0.1384023644681971,
+        "true_negative": 17092,
+        "true_positive": 87319
+      },
+      "value_1": {
+        "accuracy": 0.5161565374545286,
+        "eligible_rows": 215795,
+        "false_negative": 87319,
+        "false_positive": 17092,
+        "legitimate_false_positive_rate": 0.1384023644681971,
+        "matched_rows": 22073,
+        "phishing_recall": 0.05396533044420369,
+        "phishing_share_95pct_wilson_interval": [
+          0.22019375971481037,
+          0.23122233064438769
+        ],
+        "phishing_share_among_matches": 0.22566030897476555,
+        "specificity": 0.8615976355318029,
+        "true_negative": 106403,
+        "true_positive": 4981
+      }
+    },
+    "IsDomainIP": {
+      "missing_or_invalid_values_on_valid_label_rows": {},
+      "phi_correlation_with_phishing": 0.05973618185382944,
+      "value_0": {
+        "accuracy": 0.42506082161310504,
+        "eligible_rows": 215795,
+        "false_negative": 574,
+        "false_positive": 123495,
+        "legitimate_false_positive_rate": 1.0,
+        "matched_rows": 215221,
+        "phishing_recall": 0.9937811484290358,
+        "phishing_share_95pct_wilson_interval": [
+          0.4241065475951007,
+          0.42828502679442726
+        ],
+        "phishing_share_among_matches": 0.4261944698705052,
+        "specificity": 0.0,
+        "true_negative": 0,
+        "true_positive": 91726
+      },
+      "value_1": {
+        "accuracy": 0.574939178386895,
+        "eligible_rows": 215795,
+        "false_negative": 91726,
+        "false_positive": 0,
+        "legitimate_false_positive_rate": 0.0,
+        "matched_rows": 574,
+        "phishing_recall": 0.006218851570964247,
+        "phishing_share_95pct_wilson_interval": [
+          0.9933520539898016,
+          0.9999999999999999
+        ],
+        "phishing_share_among_matches": 1.0,
+        "specificity": 1.0,
+        "true_negative": 123495,
+        "true_positive": 574
+      }
+    },
+    "IsHTTPS": {
+      "missing_or_invalid_values_on_valid_label_rows": {},
+      "phi_correlation_with_phishing": -0.6091824768177803,
+      "value_0": {
+        "accuracy": 0.7894158808128084,
+        "eligible_rows": 215795,
+        "false_negative": 45443,
+        "false_positive": 0,
+        "legitimate_false_positive_rate": 0.0,
+        "matched_rows": 46857,
+        "phishing_recall": 0.5076598049837486,
+        "phishing_share_95pct_wilson_interval": [
+          0.9999180241177688,
+          1.0
+        ],
+        "phishing_share_among_matches": 1.0,
+        "specificity": 1.0,
+        "true_negative": 123495,
+        "true_positive": 46857
+      },
+      "value_1": {
+        "accuracy": 0.21058411918719155,
+        "eligible_rows": 215795,
+        "false_negative": 46857,
+        "false_positive": 123495,
+        "legitimate_false_positive_rate": 1.0,
+        "matched_rows": 168938,
+        "phishing_recall": 0.49234019501625137,
+        "phishing_share_95pct_wilson_interval": [
+          0.266882908072483,
+          0.27111194668926625
+        ],
+        "phishing_share_among_matches": 0.2689921746439522,
+        "specificity": 0.0,
+        "true_negative": 0,
+        "true_positive": 45443
+      }
+    }
+  },
+  "class_counts": {
+    "legitimate": 123495,
+    "phishing": 92300
+  },
+  "dataset_phishing_share": 0.42772075349289834,
+  "generated_at_utc": "2026-11-13T17:26:55.835581+00:00",
+  "identifier_checks": {
+    "Domain_ID": {
+      "duplicate_occurrences_after_first": 13962,
+      "missing_values": 0,
+      "unique_nonmissing_values": 201833
+    },
+    "Title_ID": {
+      "duplicate_occurrences_after_first": 34355,
+      "missing_values": 0,
+      "unique_nonmissing_values": 181440
+    },
+    "URL_ID": {
+      "duplicate_occurrences_after_first": 355,
+      "missing_values": 0,
+      "unique_nonmissing_values": 215440
+    }
+  },
+  "label_mapping": {
+    "classification_counts": {
+      "Legitimate": 123495,
+      "Phishing": 92300
+    },
+    "cross_tab": [
+      {
+        "Classification": "Legitimate",
+        "Phishing": "0",
+        "count": 123495
+      },
+      {
+        "Classification": "Phishing",
+        "Phishing": "1",
+        "count": 92300
+      }
+    ],
+    "evidence": "Challenge PDF page 2 explicitly defines the coding; Classification text was cross-checked row by row.",
+    "invalid_target_rows": 0,
+    "legitimate_value": 0,
+    "mismatched_classification_rows": 0,
+    "phishing_value": 1,
+    "target_column": "Phishing"
+  },
+  "limitations": [
+    "These are associations in the supplied dataset, not browser-extension accuracy or live threat probabilities.",
+    "The workbook is anonymized. It cannot validate real domains, brands, exact URL patterns, domain reputation, or live page behavior.",
+    "There are no collection-date columns in this workbook; temporal generalization and current threat coverage cannot be assessed.",
+    "Dataset class balance need not match a user's browsing. Precision can differ substantially in deployment.",
+    "Spreadsheet feature extraction definitions are not supplied; extension approximations of similarly named signals may differ.",
+    "No single listed feature proves phishing. Legitimate login pages can request passwords or submit forms externally, and phishing can use HTTPS.",
+    "Related webpages or repeated domain IDs can make row-level independence assumptions optimistic. No train/test separation was attempted."
+  ],
+  "method": {
+    "analysis_type": "Descriptive full-dataset contingency counts. No model training, holdout set, tuning, or network access.",
+    "collection_dates_present": false,
+    "intervals": "Wilson 95% binomial intervals quantify finite-sample uncertainty in observed matched-row phishing share; they do not account for selection bias or deployment shift.",
+    "metrics": "Rules predict positive when their stated conditions match. Precision is phishing share among matches; recall is matched phishing / eligible phishing; false-positive rate is matched legitimate / eligible legitimate.",
+    "missing_values": "Blank/None values counted in source missingness. Missing or nonbinary features are excluded from that feature/rule denominator, never treated as zero.",
+    "positive_class": "Phishing=1"
+  },
+  "missingness": {
+    "by_column": {
+      "Bank": 0,
+      "CharContinuationRate": 0,
+      "Classification": 0,
+      "Crypto": 0,
+      "DegitRatioInURL": 0,
+      "DomainLength": 0,
+      "DomainTitleMatchScore": 0,
+      "Domain_Anonymized": 0,
+      "Domain_ID": 0,
+      "HasCopyrightInfo": 0,
+      "HasDescription": 0,
+      "HasExternalFormSubmit": 0,
+      "HasFavicon": 0,
+      "HasHiddenFields": 0,
+      "HasObfuscation": 0,
+      "HasPasswordField": 0,
+      "HasSocialNet": 0,
+      "HasSubmitButton": 0,
+      "HasTitle": 0,
+      "IsDomainIP": 0,
+      "IsHTTPS": 0,
+      "IsResponsive": 0,
+      "LargestLineLength": 0,
+      "LetterRatioInURL": 0,
+      "LineOfCode": 0,
+      "NoOfAmpersandInURL": 0,
+      "NoOfCSS": 0,
+      "NoOfDegitsInURL": 0,
+      "NoOfEmptyRef": 0,
+      "NoOfEqualsInURL": 0,
+      "NoOfExternalRef": 0,
+      "NoOfImage": 0,
+      "NoOfJS": 0,
+      "NoOfLettersInURL": 0,
+      "NoOfObfuscatedChar": 0,
+      "NoOfOtherSpecialCharsInURL": 0,
+      "NoOfPopup": 0,
+      "NoOfQMarkInURL": 0,
+      "NoOfSelfRedirect": 0,
+      "NoOfSelfRef": 0,
+      "NoOfSubDomain": 0,
+      "NoOfURLRedirect": 0,
+      "NoOfiFrame": 0,
+      "ObfuscationRatio": 0,
+      "Pay": 0,
+      "Phishing": 0,
+      "Robots": 0,
+      "SpacialCharRatioInURL": 0,
+      "TLDLegitimateProb": 0,
+      "TLDLength": 0,
+      "TLD_Anonymized": 0,
+      "TLD_Group": 0,
+      "Title_Anonymized": 0,
+      "Title_ID": 0,
+      "URLCharProb": 0,
+      "URLLength": 0,
+      "URLSimilarityIndex": 0,
+      "URLTitleMatchScore": 0,
+      "URL_Anonymized": 0,
+      "URL_ID": 0
+    },
+    "rows_with_any_missing_value": 0
+  },
+  "prespecified_rule_associations": {
+    "domain_is_ip": {
+      "accuracy": 0.574939178386895,
+      "conditions": {
+        "IsDomainIP": 1
+      },
+      "eligible_rows": 215795,
+      "false_negative": 91726,
+      "false_positive": 0,
+      "legitimate_false_positive_rate": 0.0,
+      "matched_rows": 574,
+      "phishing_recall": 0.006218851570964247,
+      "phishing_share_95pct_wilson_interval": [
+        0.9933520539898016,
+        0.9999999999999999
+      ],
+      "phishing_share_among_matches": 1.0,
+      "specificity": 1.0,
+      "true_negative": 123495,
+      "true_positive": 574
+    },
+    "external_form_submit": {
+      "accuracy": 0.5319817419309993,
+      "conditions": {
+        "HasExternalFormSubmit": 1
+      },
+      "eligible_rows": 215795,
+      "false_negative": 91900,
+      "false_positive": 9096,
+      "legitimate_false_positive_rate": 0.07365480383821207,
+      "matched_rows": 9496,
+      "phishing_recall": 0.004333694474539545,
+      "phishing_share_95pct_wilson_interval": [
+        0.03826462564345944,
+        0.04635167688170739
+      ],
+      "phishing_share_among_matches": 0.04212299915754002,
+      "specificity": 0.9263451961617879,
+      "true_negative": 114399,
+      "true_positive": 400
+    },
+    "not_https": {
+      "accuracy": 0.7894158808128084,
+      "conditions": {
+        "IsHTTPS": 0
+      },
+      "eligible_rows": 215795,
+      "false_negative": 45443,
+      "false_positive": 0,
+      "legitimate_false_positive_rate": 0.0,
+      "matched_rows": 46857,
+      "phishing_recall": 0.5076598049837486,
+      "phishing_share_95pct_wilson_interval": [
+        0.9999180241177688,
+        1.0
+      ],
+      "phishing_share_among_matches": 1.0,
+      "specificity": 1.0,
+      "true_negative": 123495,
+      "true_positive": 46857
+    },
+    "password_and_external_form": {
+      "accuracy": 0.5639101925438494,
+      "conditions": {
+        "HasExternalFormSubmit": 1,
+        "HasPasswordField": 1
+      },
+      "eligible_rows": 215795,
+      "false_negative": 92038,
+      "false_positive": 2068,
+      "legitimate_false_positive_rate": 0.01674561723146686,
+      "matched_rows": 2330,
+      "phishing_recall": 0.002838569880823402,
+      "phishing_share_95pct_wilson_interval": [
+        0.10025151054028417,
+        0.12591700524545218
+      ],
+      "phishing_share_among_matches": 0.11244635193133047,
+      "specificity": 0.9832543827685332,
+      "true_negative": 121427,
+      "true_positive": 262
+    },
+    "password_and_not_https": {
+      "accuracy": 0.5780254408118817,
+      "conditions": {
+        "HasPasswordField": 1,
+        "IsHTTPS": 0
+      },
+      "eligible_rows": 215795,
+      "false_negative": 91060,
+      "false_positive": 0,
+      "legitimate_false_positive_rate": 0.0,
+      "matched_rows": 1240,
+      "phishing_recall": 0.013434452871072589,
+      "phishing_share_95pct_wilson_interval": [
+        0.9969116169963202,
+        1.0
+      ],
+      "phishing_share_among_matches": 1.0,
+      "specificity": 1.0,
+      "true_negative": 123495,
+      "true_positive": 1240
+    },
+    "password_and_obfuscation": {
+      "accuracy": 0.5727472833012813,
+      "conditions": {
+        "HasObfuscation": 1,
+        "HasPasswordField": 1
+      },
+      "eligible_rows": 215795,
+      "false_negative": 92199,
+      "false_positive": 0,
+      "legitimate_false_positive_rate": 0.0,
+      "matched_rows": 101,
+      "phishing_recall": 0.001094257854821235,
+      "phishing_share_95pct_wilson_interval": [
+        0.9633593536001439,
+        1.0
+      ],
+      "phishing_share_among_matches": 1.0,
+      "specificity": 1.0,
+      "true_negative": 123495,
+      "true_positive": 101
+    },
+    "password_field": {
+      "accuracy": 0.5161565374545286,
+      "conditions": {
+        "HasPasswordField": 1
+      },
+      "eligible_rows": 215795,
+      "false_negative": 87319,
+      "false_positive": 17092,
+      "legitimate_false_positive_rate": 0.1384023644681971,
+      "matched_rows": 22073,
+      "phishing_recall": 0.05396533044420369,
+      "phishing_share_95pct_wilson_interval": [
+        0.22019375971481037,
+        0.23122233064438769
+      ],
+      "phishing_share_among_matches": 0.22566030897476555,
+      "specificity": 0.8615976355318029,
+      "true_negative": 106403,
+      "true_positive": 4981
+    },
+    "url_obfuscation": {
+      "accuracy": 0.5743367547904261,
+      "conditions": {
+        "HasObfuscation": 1
+      },
+      "eligible_rows": 215795,
+      "false_negative": 91856,
+      "false_positive": 0,
+      "legitimate_false_positive_rate": 0.0,
+      "matched_rows": 444,
+      "phishing_recall": 0.004810400866738895,
+      "phishing_share_95pct_wilson_interval": [
+        0.9914222795924031,
+        0.9999999999999999
+      ],
+      "phishing_share_among_matches": 1.0,
+      "specificity": 1.0,
+      "true_negative": 123495,
+      "true_positive": 444
+    }
+  },
+  "runtime_seconds": 39.112,
+  "schema_version": 1,
+  "source": {
+    "all_sheets": [
+      "Sheet1"
+    ],
+    "blank_data_rows": 0,
+    "bytes": 79953847,
+    "columns": [
+      "URL_Anonymized",
+      "URL_ID",
+      "URLLength",
+      "Domain_Anonymized",
+      "Domain_ID",
+      "DomainLength",
+      "IsDomainIP",
+      "TLD_Anonymized",
+      "TLD_Group",
+      "URLSimilarityIndex",
+      "CharContinuationRate",
+      "TLDLegitimateProb",
+      "URLCharProb",
+      "TLDLength",
+      "NoOfSubDomain",
+      "HasObfuscation",
+      "NoOfObfuscatedChar",
+      "ObfuscationRatio",
+      "NoOfLettersInURL",
+      "LetterRatioInURL",
+      "NoOfDegitsInURL",
+      "DegitRatioInURL",
+      "NoOfEqualsInURL",
+      "NoOfQMarkInURL",
+      "NoOfAmpersandInURL",
+      "NoOfOtherSpecialCharsInURL",
+      "SpacialCharRatioInURL",
+      "IsHTTPS",
+      "LineOfCode",
+      "LargestLineLength",
+      "HasTitle",
+      "Title_Anonymized",
+      "Title_ID",
+      "DomainTitleMatchScore",
+      "URLTitleMatchScore",
+      "HasFavicon",
+      "Robots",
+      "IsResponsive",
+      "NoOfURLRedirect",
+      "NoOfSelfRedirect",
+      "HasDescription",
+      "NoOfPopup",
+      "NoOfiFrame",
+      "HasExternalFormSubmit",
+      "HasSocialNet",
+      "HasSubmitButton",
+      "HasHiddenFields",
+      "HasPasswordField",
+      "Bank",
+      "Pay",
+      "Crypto",
+      "HasCopyrightInfo",
+      "NoOfImage",
+      "NoOfCSS",
+      "NoOfJS",
+      "NoOfSelfRef",
+      "NoOfEmptyRef",
+      "NoOfExternalRef",
+      "Phishing",
+      "Classification"
+    ],
+    "declared_columns": 60,
+    "declared_rows_including_header": 215796,
+    "file_name": "Phishing Dataset_Anonymized.xlsx",
+    "observed_nonempty_data_rows": 215795,
+    "sha256": "320a257a1df6dafa10f97da1be1fe018389de91fa7aad7844dc57d5ef21ff34f",
+    "sheet": "Sheet1"
+  }
+}

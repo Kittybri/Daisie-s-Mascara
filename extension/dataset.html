@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>Dataset analysis · TideCheck</title>
+    <link rel="stylesheet" href="dataset.css">
+    <script type="module" src="dataset.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to analysis</a>
+    <header class="masthead">
+      <a class="brand" href="dataset.html" aria-label="TideCheck dataset analysis"><img src="assets/tide-mark.svg" width="31" height="37" alt=""><span>TideCheck</span></a>
+      <nav aria-label="Analysis sections"><a href="#overview">Overview</a><a href="#patterns">Patterns</a><a href="#columns">All columns</a><a href="#limits">Limits</a></nav>
+      <span class="local-badge"><span aria-hidden="true"></span>Included on your device</span>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="overview" aria-labelledby="page-title">
+        <div class="hero-copy"><p class="eyebrow">THE DATA BEHIND THE DISCUSSION</p><h1 id="page-title">The dataset,<br> in view.</h1><p class="lead">Explore the supplied phishing workbook: its labels, useful patterns, and every original column name.</p></div>
+        <aside class="hero-note"><span class="note-number">01 / DATASET ANALYSIS</span><h2>A reference, not a verdict.</h2><p>These are aggregate results computed from the supplied workbook. TideCheck does not compare the page you scan against this dataset or use it as a live classifier.</p><a href="#columns">Explore all 60 columns <span aria-hidden="true">↗</span></a></aside>
+      </section>
+
+      <section class="stats" aria-label="Dataset at a glance">
+        <article class="stat"><span class="stat-label">Records analyzed</span><strong id="record-count">215,795</strong><span>One worksheet, full dataset</span></article>
+        <article class="stat"><span class="stat-label">Original columns</span><strong id="column-count">60</strong><span>Exact names, original order</span></article>
+        <article class="stat"><span class="stat-label">Phishing labels</span><strong id="phishing-share">42.8%</strong><span id="phishing-count">92,300 records</span></article>
+        <article class="stat"><span class="stat-label">Missing cells</span><strong id="missing-count">0</strong><span>Blank and empty values checked</span></article>
+      </section>
+
+      <section class="overview-grid" aria-label="Labels and record quality">
+        <article class="panel label-panel"><div class="section-top"><p class="eyebrow">LABELS</p><span class="subtle">Text and numeric labels agree</span></div><h2>Two classes. Explicit coding.</h2><div class="class-split" role="img" aria-label="42.8 percent phishing and 57.2 percent legitimate"><span class="phishing-segment"></span><span class="legitimate-segment"></span></div><div class="split-legend"><div><span class="legend-marker phishing-marker"></span><strong>Phishing</strong><code>Phishing = 1</code><span id="phishing-total">92,300</span></div><div><span class="legend-marker legitimate-marker"></span><strong>Legitimate</strong><code>Phishing = 0</code><span id="legitimate-total">123,495</span></div></div><p class="detail-note">The <code>Classification</code> text agrees with the numeric label on every row. The workbook's balance does not represent the frequency of phishing in everyday browsing.</p></article>
+        <article class="panel quality-panel"><p class="eyebrow">RECORD QUALITY</p><h2>Repeated IDs deserve care.</h2><p>Duplicate occurrences after each ID's first appearance:</p><dl class="quality-list"><div><dt><code>URL_ID</code></dt><dd id="url-duplicates">355</dd></div><div><dt><code>Domain_ID</code></dt><dd id="domain-duplicates">13,962</dd></div><div><dt><code>Title_ID</code></dt><dd id="title-duplicates">34,355</dd></div></dl><p class="detail-note">Repeated IDs do not necessarily mean duplicate rows. Related pages can make random row splits look more reliable than testing on unfamiliar domains.</p></article>
+      </section>
+
+      <section class="patterns-section" id="patterns" aria-labelledby="patterns-title">
+        <div class="section-heading"><div><p class="eyebrow">WHAT THE COUNTS SHOW</p><h2 id="patterns-title">Useful signals need context.</h2></div><p>Descriptive associations across all 215,795 records. No model training or holdout evaluation.</p></div>
+        <div class="insight-grid"><article class="insight"><span class="insight-index">01</span><h3>HTTPS does not settle it.</h3><p><strong id="https-phishing-share">49.2%</strong> of phishing-labeled rows use HTTPS. Encryption alone cannot verify who is behind a page.</p></article><article class="insight"><span class="insight-index">02</span><h3>A login form is not proof.</h3><p>Rows with a password field have a <strong id="password-phishing-share">22.6%</strong> phishing share, below this dataset's overall share.</p></article><article class="insight"><span class="insight-index">03</span><h3>Rare signs cover little.</h3><p>IP-address domains and URL obfuscation each appear in <strong>less than 1%</strong> of phishing rows. Their absence cannot establish safety.</p></article></div>
+        <div class="table-wrap signal-table-wrap"><table class="signals-table"><caption>Selected conditions in the supplied workbook</caption><thead><tr><th scope="col">Condition</th><th scope="col" class="numeric">Matching records</th><th scope="col" class="numeric">Phishing records</th><th scope="col" class="numeric">Phishing share<br>among matches</th><th scope="col" class="numeric">Share of all<br>phishing records</th></tr></thead><tbody id="signal-rows"></tbody></table></div>
+        <p class="table-note">A 100% observed share describes this sample only. It is not a promised detection rate or the probability that a website is phishing. Workbook feature definitions were not supplied, so similarly named browser checks may measure different things.</p>
+      </section>
+
+      <section class="columns-section" id="columns" aria-labelledby="columns-title">
+        <div class="section-heading"><div><p class="eyebrow">THE COMPLETE SCHEMA</p><h2 id="columns-title">Every column, as supplied.</h2></div><p>Original spelling and order are preserved, including source typos. Groups are inferred from names; they are not documented definitions.</p></div>
+        <div class="column-controls"><div class="search-control"><label for="column-search">Find a column</label><input id="column-search" type="search" placeholder="Try URL, password, or TLD" autocomplete="off" spellcheck="false"></div><div class="group-control"><label for="column-group">Inferred group</label><select id="column-group"><option value="">All groups</option></select></div><button id="reset-columns" type="button">Clear filters</button></div>
+        <div class="table-toolbar"><p id="column-status" class="result-count" role="status" aria-live="polite">60 of 60 columns</p><p class="scroll-hint">Scroll within the table to explore all rows and columns.</p></div>
+        <div class="table-wrap columns-table-wrap" tabindex="0" role="region" aria-label="Dataset columns, scroll to view all rows"><table class="columns-table"><caption class="sr-only">All original worksheet column names, positions, inferred groups, and missing-value counts</caption><thead><tr><th scope="col">No.</th><th scope="col">Exact column name</th><th scope="col">Inferred group</th><th scope="col" class="numeric">Missing values</th></tr></thead><tbody id="column-rows"></tbody></table><p id="no-columns" class="no-results" hidden>No matching columns. Try a shorter name or choose all groups.</p></div>
+      </section>
+
+      <section class="limits-section" id="limits" aria-labelledby="limits-title"><div><p class="eyebrow">READ THE RESULTS WITH CARE</p><h2 id="limits-title">What this analysis can tell you.</h2><p>It describes one anonymized workbook. It cannot certify a current website, establish real-world error rates, or reproduce the original feature extraction.</p></div><ul><li>No collection-date fields are present, so current threat coverage and change over time cannot be assessed.</li><li>Anonymized URLs and domains cannot validate real brands, exact addresses, reputation, or live behavior.</li><li>No training, tuning, or held-out evaluation was performed. The reported shares are full-dataset counts.</li><li>Only aggregate statistics and column names are included here. Raw dataset records are not bundled with the extension.</li></ul></section>
+
+      <footer class="page-footer"><div><strong>Source</strong><p><span id="source-name">Phishing Dataset_Anonymized.xlsx</span> · <span id="source-sheet">Sheet1</span><br>Profile generated <span id="profile-date">November 13, 2026</span>. Counts exclude the header row.</p></div><div><strong>Method</strong><p>Full workbook scan for labels, missing values, identifier counts, and feature contingency tables. No browsing data is used on this page.</p></div><a href="#main">Back to top ↑</a></footer>
+    </main>
+  </body>
+</html>

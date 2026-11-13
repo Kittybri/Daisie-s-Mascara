@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>TideCheck — Settings &amp; privacy</title>
+    <link rel="stylesheet" href="options.css">
+    <script type="module" src="options.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header><div class="brand"><img src="assets/tide-mark.svg" width="33" height="38" alt=""><span>TideCheck</span></div><span class="header-note">Local by design</span></header>
+      <main>
+        <p class="eyebrow">SETTINGS &amp; PRIVACY</p>
+        <h1>A clearer view.<br>A smaller footprint.</h1>
+        <p class="lead">TideCheck checks webpages for common phishing warning signs. Choose automatic checks on page load or scan pages yourself. All checks stay on your device.</p>
+
+        <section aria-labelledby="automatic-heading">
+          <div class="automatic-setting">
+            <div><h2 id="automatic-heading">Automatic page checks</h2><p>Review each HTTP or HTTPS page when it loads. Page changes after loading need another scan.</p></div>
+            <label class="switch-label"><input id="auto-check-enabled" type="checkbox" checked><span>Automatically check pages</span></label>
+          </div>
+          <p>Chrome's website-access permission lets TideCheck read the current address and selected page structure for these local checks. You can manage site access in Chrome's extension settings. Familiar domains are checked too.</p>
+          <p id="automatic-feedback" class="feedback" role="status" aria-live="polite"></p>
+        </section>
+
+        <section aria-labelledby="familiar-heading">
+          <div class="section-heading"><h2 id="familiar-heading">Familiar domains</h2><span id="domain-count" class="count-label">Loading…</span></div>
+          <p>A personal reminder, not a safety approval. Familiar markers never remove a finding or lower a concern level.</p>
+          <p id="empty-state" class="empty-state" hidden>No familiar domains yet. Add one from a page check.</p>
+          <ul id="domain-list" class="domain-list" aria-label="Familiar domains"></ul>
+          <button id="clear-button" class="secondary-button" type="button" disabled>Clear all familiar domains</button>
+          <p id="save-feedback" class="feedback" role="status" aria-live="polite"></p>
+          <p id="error-message" class="error-message" role="alert" hidden></p>
+        </section>
+
+        <section id="privacy" aria-labelledby="privacy-heading">
+          <p class="eyebrow">PRIVACY</p>
+          <h2 id="privacy-heading">Your page stays on your device.</h2>
+          <dl class="privacy-grid">
+            <div><dt>When it runs</dt><dd>With automatic checks enabled, when an HTTP or HTTPS webpage loads. Select “Scan again” to run a manual check or refresh one after page content changes. Chrome restricts checks on browser settings and some protected pages.</dd></div>
+            <div><dt>What it checks</dt><dd>The current web address and selected page structure, such as form destinations, links, and the presence of password fields.</dd></div>
+            <div><dt>What it never reads</dt><dd>Password text, form field values, cookies, or saved browser history. It does not submit forms or change the website.</dd></div>
+            <div><dt>What it stores</dt><dd>Domains you mark as familiar stay in local extension storage until you remove them or uninstall. Recent scan results are temporary.</dd></div>
+            <div><dt>What leaves your device</dt><dd>Nothing from a scan. There is no analytics, advertising, account, or external reputation service.</dd></div>
+          </dl>
+        </section>
+
+        <section aria-labelledby="synthid-heading">
+          <p class="eyebrow">SYNTHID</p>
+          <h2 id="synthid-heading">Not checked by TideCheck.</h2>
+          <p>TideCheck does not detect SynthID watermarks. Use Google's detector to check selected media. No media is uploaded by TideCheck. A missing detection does not mean content is human-made.</p>
+          <button id="synthid-button" class="secondary-button" type="button">Open Google's SynthID detector</button>
+        </section>
+
+        <section aria-labelledby="dataset-heading">
+          <p class="eyebrow">DATASET</p>
+          <h2 id="dataset-heading">Explore the phishing dataset.</h2>
+          <p>View the supplied dataset's analysis and its limitations separately from this page's warning signs.</p>
+          <button id="dataset-button" class="secondary-button" type="button">Open dataset analysis</button>
+        </section>
+
+        <section aria-labelledby="limits-heading">
+          <p class="eyebrow">LIMITS</p>
+          <h2 id="limits-heading">A useful pause, not a guarantee.</h2>
+          <p>TideCheck uses explainable checks. Its concern levels are not trained-model probabilities. Legitimate websites can trigger warnings, and phishing pages can avoid them.</p>
+          <p>Checks cover the current page and the information the browser makes available. They cannot verify the organization behind a website, inspect every embedded frame, or predict what a link will do after you follow it.</p>
+          <p>If a request for a password, payment, or personal information feels unexpected, navigate to the organization through an address you already trust or contact it directly.</p>
+        </section>
+      </main>
+      <footer>Built to make warning signs easier to understand.</footer>
+    </div>
+  </body>
+</html>

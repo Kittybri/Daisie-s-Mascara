@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>TideCheck</title>
+    <link rel="stylesheet" href="popup.css">
+    <script type="module" src="popup.js"></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="brand">
+        <img src="assets/tide-mark.svg" width="33" height="38" alt="">
+        <div><h1>TideCheck</h1><p>A second look before you click.</p></div>
+      </div>
+      <button id="settings-button" class="icon-button" type="button" aria-label="Open settings and privacy" title="Settings and privacy">
+        <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m10 3-.7 2.1-2 .9-2-.5-2 3.4L4.8 11v2L3.3 15l2 3.5 2-.5 2 1 .7 2h4l.7-2 2-1 2 .5 2-3.5-1.5-2v-2l1.5-2.1-2-3.4-2 .5-2-.9L14 3z"/><circle cx="12" cy="12" r="3"/></svg>
+      </button>
+    </header>
+
+    <main>
+      <section id="status-card" class="status-card" data-level="idle" aria-labelledby="status-heading">
+        <div class="status-topline"><span id="status-eyebrow" class="eyebrow">AUTOMATIC PAGE CHECK</span><span class="status-dot" aria-hidden="true"></span></div>
+        <h2 id="status-heading">Getting page status…</h2>
+        <p id="status-description">Local phishing checks run when a webpage loads. Reviewing the current page's status.</p>
+        <p id="domain-label" class="domain-label" hidden></p>
+        <p id="familiar-note" class="familiar-note" hidden>You marked this domain as familiar. Warning signs still deserve a look.</p>
+      </section>
+
+      <div id="error-message" class="error-message" role="alert" hidden></div>
+
+      <button id="scan-button" class="primary-button" type="button"><span id="scan-button-label">Scan again</span><svg viewBox="0 0 20 20" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m12.5 12.5 4 4"/></svg></button>
+      <p id="scan-meta" class="scan-meta" aria-live="polite">Checks page loads automatically. Stays on your device.</p>
+      <p id="coverage-note" class="coverage-note" hidden></p>
+
+      <section id="findings-section" class="findings-section" aria-labelledby="findings-heading" hidden>
+        <div class="section-heading"><h3 id="findings-heading">What we noticed</h3><span id="signal-count" class="count-label"></span></div>
+        <ul id="signals-list" class="signals-list"></ul>
+        <p id="empty-findings" class="empty-findings" hidden>No strong warning signs matched these checks. This does not verify the website or guarantee it is safe.</p>
+        <div class="familiar-action"><button id="trust-button" class="text-button" type="button">Mark domain as familiar</button><span id="trust-feedback" class="feedback" role="status"></span></div>
+      </section>
+
+      <section id="intro-section" class="intro-section" aria-labelledby="intro-heading">
+        <h3 id="intro-heading">Checks on every page load.</h3>
+        <div class="intro-row"><span class="step-number">01</span><p>Reviews the address and page structure locally.</p></div>
+        <div class="intro-row"><span class="step-number">02</span><p>Explains warning signs. Use Scan again after the page changes.</p></div>
+      </section>
+
+      <section class="synthid-section" aria-labelledby="synthid-heading">
+        <div class="section-heading"><h3 id="synthid-heading">SynthID</h3><span class="not-checked">Not checked</span></div>
+        <p>TideCheck does not detect SynthID watermarks. Use Google's detector to check selected media. No media is uploaded by TideCheck.</p>
+        <button id="synthid-button" class="text-button synthid-button" type="button">Open Google's SynthID detector</button>
+      </section>
+
+      <aside class="limit-note"><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10" cy="10" r="7.3"/><path d="M10 8.5v5M10 5.5v.5"/></svg><p>Checks cover the top-level page only. These are rules, not a safety verdict. Verify unexpected requests through a trusted channel.</p></aside>
+    </main>
+
+    <footer><span class="local-label"><span aria-hidden="true"></span>Local by design</span><button id="dataset-button" class="footer-button" type="button">Dataset analysis</button><button id="privacy-button" class="footer-button" type="button">Privacy &amp; limits</button></footer>
+  </body>
+</html>

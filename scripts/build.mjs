@@ -1,0 +1,20 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { spawnSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
+
+const manifest = JSON.parse(await fs.readFile('extension/manifest.json', 'utf8'));
+const output = path.resolve('dist');
+await fs.mkdir(output, { recursive: true });
+const name = `tidecheck-${manifest.version}`;
+const bundle = path.join(output, name);
+await fs.rm(bundle, { recursive: true, force: true });
+await fs.cp('extension', bundle, { recursive: true });
+const zipPath = path.join(output, `${name}.zip`);
+await fs.rm(zipPath, { force: true });
+const zipped = spawnSync('zip', ['-q', '-r', '-X', zipPath, '.'], { cwd: bundle, encoding: 'utf8' });
+if (zipped.status !== 0) throw new Error(zipped.stderr || 'zip failed');
+const bytes = await fs.readFile(zipPath);
+const sha256 = createHash('sha256').update(bytes).digest('hex');
+await fs.writeFile(`${zipPath}.sha256`, `${sha256}  ${path.basename(zipPath)}\n`);
+console.log(`Built ${zipPath}\nSHA-256 ${sha256}\nOnly extension files are packaged; source dataset and tooling are excluded.`);
