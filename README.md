@@ -8,7 +8,7 @@ A Chrome Manifest V3 extension that automatically checks webpages for phishing w
 
 [![Daisie Mascara presentation cover — open the team presentation in Canva](presentations/slide-1.png)](https://canva.link/h31ufynec0q7l70)
 
-[Download the five-slide PowerPoint](presentations/tidecheck-digital-immune-system.pptx) · [View all five slide previews](presentations/README.md)
+[Download the five-slide PowerPoint](presentations/daisie-mascara-digital-immune-system.pptx) · [View all five slide previews](presentations/README.md)
 
 ## Project materials
 

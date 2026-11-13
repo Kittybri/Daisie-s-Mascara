@@ -1,6 +1,6 @@
 # Daisie Mascara presentation
 
-[Download the five-slide PowerPoint](tidecheck-digital-immune-system.pptx)
+[Download the five-slide PowerPoint](daisie-mascara-digital-immune-system.pptx)
 
 The deck follows the assignment structure: the problem, the approach, findings, implications, and recommendations. Speaker notes include evidence sources and distinguish the current browser extension from the proposed volunteer compute network, shared index, and recursive improvement process.
 
