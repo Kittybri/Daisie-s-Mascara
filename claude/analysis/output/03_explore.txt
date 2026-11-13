@@ -169,9 +169,8 @@ path_len (non-empty) by class:
                 count    mean      std    min     25%     50%     75%        max
 Phishing                                                                       
 1        26,229.0000 47.9028 100.5597 1.0000 11.0000 25.0000 57.0000 5,744.0000
-sample legit URLs: ['https://ezo.tueiwcd.tnk', 'https://iml.aewcpselsqflz.ita', 'https://qtd.kotwvfuvlld-tlifllo.wgo', 'https://lkp.uaxbilrpo.nxq', 'https://pyc.hvhzpqgwhob.tb.rf', 'https://uok.eppd.raz', 'https://pal.lhf.nd.jf', 'https://yhb.imqnjwj.dfx']
-sample phish URLs: ['http://iee.qdkoisig.gp', 'https://vnfbdqh.zglcie.kgaxu/iuui/uoaninuflnjb2z8ildiu5vsfjvhkgijlbu3ujber4yqkgcvndalrrjjsode//hvnefmatprnc_dgqpjj804429.nqkh', 'https://zeepvwjigbwboykp.fjdiauredhy.ify/', 'https://tpdris-qw.esw.hjz/', 'http://miv.tymdnvyzsnatdnah.ocf', 'http://prx.iaoms-ajs.ibr', 'http://umsejrbyjlfnlmhf.fj/srqtgithuqcbh/ku.pxm', 'http://qyz.vxylvg.zr.rvua.sp']
-sample legit URLs WITH path: []
+
+[Dataset row samples omitted from public output; aggregate results retained.]
 
 === ID structure ===
 rows sharing a URL_ID: 710 | distinct dup URL_IDs: 355
@@ -188,23 +187,24 @@ cls
 legit 123,452.0000 1.0000 0.0000 1.0000 1.0000 1.0000 1.0000     1.0000
 phish  78,381.0000 1.1781 5.3083 1.0000 1.0000 1.0000 1.0000 1,093.0000
 top multi-URL domains:
+[Dataset row samples omitted from public output; aggregate results retained.]
                    n  phish
-Domain_ID                 
-domain_000119  1093 1.0000
-domain_000038   468 1.0000
-domain_000052   348 1.0000
-domain_000788   335 1.0000
-domain_000539   293 1.0000
-domain_000647   258 1.0000
-domain_000387   225 1.0000
-domain_001579   207 1.0000
-domain_000190   174 1.0000
-domain_000344   170 1.0000
-domain_001020   167 1.0000
-domain_000611   158 1.0000
-domain_001989   153 1.0000
-domain_002379   152 1.0000
-domain_001324   135 1.0000
+Rank
+           1  1093 1.0000
+           2   468 1.0000
+           3   348 1.0000
+           4   335 1.0000
+           5   293 1.0000
+           6   258 1.0000
+           7   225 1.0000
+           8   207 1.0000
+           9   174 1.0000
+          10   170 1.0000
+          11   167 1.0000
+          12   158 1.0000
+          13   153 1.0000
+          14   152 1.0000
+          15   135 1.0000
 share of rows whose domain has >1 URL, by class:
  Phishing
 0   0.0003
@@ -213,33 +213,34 @@ Name: Domain_ID, dtype: float64
 
 titles: 181440 | titles used >1x: 3738 | rows in those: 38093
 top reused titles:
+[Dataset row samples omitted from public output; aggregate results retained.]
                    n  phish   ndom  hastitle
-Title_ID                                   
-title_000012  29937 0.9947  26220    0.0002
-title_026965     19 0.2632     18    1.0000
-title_010578     11 1.0000     11    1.0000
-title_041596      9 0.0000      9    1.0000
-title_016099      9 1.0000      9    1.0000
-title_040454      9 0.2222      9    1.0000
-title_013110      7 1.0000      7    1.0000
-title_058913      6 0.5000      6    1.0000
-title_016407      6 0.8333      6    1.0000
-title_066553      6 0.8333      6    1.0000
-title_046752      6 1.0000      6    1.0000
-title_076413      6 0.0000      6    1.0000
-title_016022      6 0.0000      6    1.0000
-title_032427      6 0.1667      6    1.0000
-title_009549      6 1.0000      6    1.0000
-title_013490      6 1.0000      6    1.0000
-title_063443      6 1.0000      6    1.0000
-title_001043      6 0.1667      6    1.0000
-title_036144      6 1.0000      6    1.0000
-title_004277      6 0.0000      6    1.0000
-title_009657      5 1.0000      4    1.0000
-title_049884      5 1.0000      5    1.0000
-title_040596      5 1.0000      5    1.0000
-title_036460      5 0.2000      5    1.0000
-title_044791      5 0.0000      5    1.0000
+Rank
+           1  29937 0.9947  26220    0.0002
+           2     19 0.2632     18    1.0000
+           3     11 1.0000     11    1.0000
+           4      9 0.0000      9    1.0000
+           5      9 1.0000      9    1.0000
+           6      9 0.2222      9    1.0000
+           7      7 1.0000      7    1.0000
+           8      6 0.5000      6    1.0000
+           9      6 0.8333      6    1.0000
+          10      6 0.8333      6    1.0000
+          11      6 1.0000      6    1.0000
+          12      6 0.0000      6    1.0000
+          13      6 0.0000      6    1.0000
+          14      6 0.1667      6    1.0000
+          15      6 1.0000      6    1.0000
+          16      6 1.0000      6    1.0000
+          17      6 1.0000      6    1.0000
+          18      6 0.1667      6    1.0000
+          19      6 1.0000      6    1.0000
+          20      6 0.0000      6    1.0000
+          21      5 1.0000      4    1.0000
+          22      5 1.0000      5    1.0000
+          23      5 1.0000      5    1.0000
+          24      5 0.2000      5    1.0000
+          25      5 0.0000      5    1.0000
 title shared by >= 1 domains (HasTitle=1): n=185864, phish rate=0.3364
 title shared by >= 2 domains (HasTitle=1): n=5133, phish rate=0.4615
 title shared by >= 5 domains (HasTitle=1): n=298, phish rate=0.5302

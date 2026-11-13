@@ -114,22 +114,22 @@ HasPasswordField           0.0042       0.0544     0.1384
 HasTitle                   0.7826       0.6766     0.9988
 DomainTitleMatchScore     65.5108      16.1988    75.2716
 TLDLegitimateProb          0.2884       0.2316     0.2817
-sample hard URLs: ['http://cev.rupc.etm', 'http://tmx.cbzdjzvxsoz.nye', 'http://yvo.sm-ge.yncq', 'http://arg.hlzieslnb.eqk', 'http://ivx.ztnbrblvxdf.elt', 'http://ezl.sqsvoh.woh.ig', 'http://bub.kscslsqxa-ipjphzzc.wsw', 'http://vdg.pvhfmzdxtbxcpdurfafyrufe.vgq', 'http://kli.mbopcofjapttibfouxx.nwu', 'http://svz.ridxjpmjpn.fjc', 'http://gvd.rbtyvy.pcrn.al', 'http://ftq.fpebsonn.dyp']
-mixed-label domains sample:
+[Dataset row samples omitted from public output; aggregate results retained.]
+mixed-label domains sample (ranked; dataset IDs omitted):
                 n  phish
-Domain_ID              
-domain_055570  4 0.7500
-domain_096020  3 0.6667
-domain_038754  3 0.6667
-domain_000713  2 0.5000
-domain_097127  2 0.5000
-domain_086539  2 0.5000
-domain_087270  2 0.5000
-domain_088927  2 0.5000
-domain_094285  2 0.5000
-domain_095417  2 0.5000
-domain_095864  2 0.5000
-domain_098297  2 0.5000
+Rank
+           1  4 0.7500
+           2  3 0.6667
+           3  3 0.6667
+           4  2 0.5000
+           5  2 0.5000
+           6  2 0.5000
+           7  2 0.5000
+           8  2 0.5000
+           9  2 0.5000
+          10  2 0.5000
+          11  2 0.5000
+          12  2 0.5000
 
 === login pages only (HasPasswordField == 1) ===
 Phishing               0      1
