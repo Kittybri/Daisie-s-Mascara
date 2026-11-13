@@ -95,6 +95,8 @@ Browser code improvements ship as packaged extension releases. Index updates con
 
 ## First demonstration
 
+The build specifications are the [network protocol](network-protocol.md), the [implementation plan](implementation-plan.md), and an [illustrative pilot policy](pilot-policy.example.json). These are design artifacts. The JSON example is not wired into the current extension or a running service; its initial limits require pilot testing.
+
 | Stage | Deliverable | Evidence needed before expanding |
 | --- | --- | --- |
 | Local demonstration | Three explicitly started workers, a coordinator, versioned index, and contribution credits | Reproducible jobs, a rejected bad result, an accepted candidate, pause/leave behavior, and no browsing uploads. |

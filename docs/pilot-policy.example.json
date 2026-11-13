@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "status": "design_example_not_runtime_configuration",
+  "networkId": "daisie-mascara-local-demo",
+  "participation": {
+    "enabledByDefault": false,
+    "explicitEnrollmentRequired": true,
+    "pauseImmediatelyStopsNewWork": true,
+    "browserProtectionIndependent": true
+  },
+  "work": {
+    "allowedTaskTypes": ["summarize_features_v1", "evaluate_detector_v1"],
+    "inputClassification": ["approved_public", "synthetic"],
+    "arbitraryCodeAllowed": false,
+    "networkAccessDuringExecution": false,
+    "maxJobWallSeconds": 60,
+    "maxInputBytes": 1048576,
+    "maxOutputBytes": 65536,
+    "cancelCheckpointMaxSeconds": 2,
+    "budgetStatus": "initial_design_limits_to_validate_in_the_pilot"
+  },
+  "privacy": {
+    "liveBrowsingUpload": false,
+    "browserProfileAccess": false,
+    "formValueAccess": false,
+    "pageDependentRemoteLookup": false,
+    "privateInputsOnPublicWorkers": false
+  },
+  "verification": {
+    "workerSelfApproval": false,
+    "demoEvaluatorIndependence": "simulated_roles_only",
+    "realPilotRequiresSeparateEvaluatorOperator": true,
+    "sealedEvaluationAvailableToProposer": false,
+    "creditsRequireAcceptedWorkReceipt": true,
+    "settlementKey": ["networkId", "jobId", "workUnitId"],
+    "receiptsDoNotAuthorizeRelease": true
+  },
+  "index": {
+    "supportedSubjectScopes": ["exact_url", "host"],
+    "wildcardScopeEnabled": false,
+    "statuses": ["unknown", "reviewed", "phishing_evidence", "disputed", "expired"],
+    "positiveReviewExpires": true,
+    "noEntryMeans": "unknown",
+    "scheduledSnapshotDownloadsOnly": true,
+    "livePageSelectsDownloadBundle": false
+  },
+  "releases": {
+    "executableChangesRequireReviewedCommit": true,
+    "browserCodeDeliveredAsPackagedExtension": true,
+    "candidateCanEditAcceptancePolicy": false,
+    "candidateHasSigningKeys": false,
+    "retainPreviousVerifiedVersion": true,
+    "rollbackRequiresAuthorizedDecision": true
+  },
+  "accounting": {
+    "mode": "non_transferable_demo_credits",
+    "promisedMonetaryValue": false,
+    "rewardRawTokenCount": false,
+    "rewardThreatClaimCount": false,
+    "realPaymentsEnabled": false
+  }
+}
