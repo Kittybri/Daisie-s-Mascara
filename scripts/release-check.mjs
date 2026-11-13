@@ -3,6 +3,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
+import { validateExtensionFiles } from './extension-files.mjs';
 
 const root = process.cwd();
 const lockPath = path.join(root, '.release.lock');
@@ -25,15 +26,7 @@ try {
   assert.ok((await fs.readFile('docs/CHANGELOG.md', 'utf8')).includes(manifest.version));
   const zipPath = `dist/tidecheck-${manifest.version}.zip`;
   const inventory = run('unzip', ['-Z1', zipPath], false).trim().split('\n').filter(file => !file.endsWith('/')).sort();
-  const recursiveFiles = async directory => {
-    const output = [];
-    for (const item of await fs.readdir(directory, { withFileTypes: true })) {
-      if (item.isDirectory()) output.push(...await recursiveFiles(path.join(directory, item.name)));
-      else output.push(path.join(directory, item.name).replace(/^extension\//, ''));
-    }
-    return output.sort();
-  };
-  assert.deepEqual(inventory, await recursiveFiles('extension'));
+  assert.deepEqual(inventory, await validateExtensionFiles());
   for (const file of inventory) {
     const actual = spawnSync('unzip', ['-p', zipPath, file], { maxBuffer: 2_000_000 });
     assert.equal(actual.status, 0);

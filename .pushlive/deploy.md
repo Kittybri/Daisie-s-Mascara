@@ -7,7 +7,7 @@
 - The user requested build and release. That request authorizes the relevant release once the required checks and account prerequisites are satisfied; do not ask for a second general publishing approval.
 - Verify developer registration and record the available signed-in account used. Publisher name, support email, public privacy policy host, and store item ID still require real values; do not invent them.
 - Current live version: none verified.
-- Current source repository has no configured remote hosting requirement. Do not claim remote CI or branch protection has been enabled.
+- Source repository: https://github.com/Kittybri/Daisie-s-Mascara. The checks workflow runs lint, tests, and builds on Node.js 22 and 24. Verify the exact candidate's workflow run before claiming remote CI passed. Branch protection has not been verified.
 
 ## Native version and candidate
 
@@ -26,7 +26,7 @@ The releasable artifact is `dist/tidecheck-0.2.0.zip`, produced from the validat
 | `docs/store-listing.md` | Internal preparation; safe to share | Store copy, permission explanations, and missing fields. |
 | `docs/release-review.md` | Internal preparation; sanitized | Candidate identity, review outcomes, validation, and deployment receipt. |
 
-Repository visibility is not established. Keep all tracked records suitable for public exposure. Detailed security findings belong in protected local evidence outside the distributable package and must not be included in store assets or public logs.
+The repository is public. Keep all tracked records suitable for public exposure. Detailed security findings belong in protected local evidence outside the distributable package and must not be included in store assets or public logs.
 
 ## Required candidate checks
 

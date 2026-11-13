@@ -19,15 +19,15 @@ State: local release candidate. Not submitted and not published. Automated check
 | --- | --- | --- |
 | `docs/CHANGELOG.md` | Public | Updated for 0.2.0 automatic checks, settings, aggregate dataset/schema view, and external SynthID link. Retains the unpublished state. |
 | `docs/PRD.md` | Public | Updated to match automatic-load/activation/install checks, disabling behavior, HTTP/HTTPS host access, dataset content, and the explicit absence of a local SynthID detector. |
-| `docs/BACKLOG.md` | Public | Records implemented follow-up requests separately from pending store publication. No unapproved future features added. |
+| `docs/BACKLOG.md` | Public | Records implemented follow-up requests separately from pending store publication. Separates implemented extension features from the proposed collective-defense network. |
 
 ## Validation evidence
 
 | Required check | Result | Evidence |
 | --- | --- | --- |
-| Static/lint checks | Passed locally; final rerun required | Syntax; expected `scripting`/`storage` and HTTP/HTTPS permissions; no remote code, scanner upload APIs, unsafe HTML sinks, or matched secret patterns. Final run and timestamp captured by release gate. |
-| Automated tests | Passed locally; final rerun required | 28 tests, including automatic load/install/activation, disable/manual behavior, failure states, URL scrubbing, rule boundaries, stale scans, same-URL reload, and storage/navigation races. |
-| Extension-only package build | Final candidate pending | Manifest at ZIP root; package must match the final source byte-for-byte. Raw dataset records are excluded; aggregate analysis and schema are intentional. Final digest captured by release gate. |
+| Static/lint checks | Passed locally; rerun before store submission | Syntax, explicit extension-file allowlist, expected permissions, and package boundaries. Final run and timestamp captured by release gate. |
+| Automated tests | Passed locally; rerun before store submission | 34 tests cover scanning, malformed destination recovery, no form-value access, navigation races, automatic/manual behavior, deterministic archives, and rejected unexpected files/symlinks. |
+| Extension-only package build | Passed locally; rerun before store submission | Manifest at ZIP root; package must match the final source byte-for-byte. Raw dataset records are excluded; aggregate analysis and schema are intentional. Final digest captured by release gate. |
 | Release-record gate | Implemented | Requires a clean commit, executes local gates under an exclusive lock, and records commit/digest. Does not assert store readiness. |
 | Production-permission browser smoke | Passed | 15 browser scenarios in Chromium 151 using the release manifest unchanged, including automatic concern results, disable/manual behavior, 60 columns/search, failure handling and bounded scans. |
 | Native Chrome installation/demo | Partially verified | Live scanner preview ran the actual engine and displayed High concern. Dataset view showed 60 columns; search for password found HasPasswordField and reset restored 60. The native unpacked-extension picker kept Select disabled, including for a local copy outside iCloud; regular-profile installation and popup verification remain open. |

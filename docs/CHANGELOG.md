@@ -4,6 +4,13 @@
 
 Publication status: not submitted or published.
 
+Candidate refinements:
+
+- Continue checking valid form destinations when another destination is malformed.
+- Reject unexpected files and symlinks during packaging and produce reproducible ZIP archives.
+- Run repository lint, tests, and builds in GitHub Actions on Node.js 22 and 24.
+- Add the five-slide Daisie Mascara presentation and the collective-defense architecture specifications.
+
 - Automatically check supported webpages after loading and show a toolbar concern badge.
 - Disable automatic checks in settings and keep manual rescans available.
 - View the supplied dataset's aggregate analysis and search all 60 original column names.

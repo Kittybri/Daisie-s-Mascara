@@ -17,22 +17,17 @@ The repository implements a local Chrome extension with explained phishing warni
 | Verification is separate from contribution and payment | A worker, wallet, or token holder cannot approve its own work merely by participating. |
 | Packaged code releases are separate from index data | A refreshed index must not become a way to execute unreviewed code on participants' devices. |
 
-## Two connected loops
+## Architecture map and build contracts
 
-The protection loop stays on the user’s device. The research loop processes approved public or synthetic material and distributes verified results back to clients.
+The [detailed architecture](detailed-architecture.md) expands the system into source admission, artifact storage, scheduling, worker isolation, independent evaluation, evidence resolution, signed distribution, local decisions, optional settlement, and the GitHub improvement loop.
 
-```mermaid
-flowchart TB
-    S[Approved public research data] --> X[Distributed indexing and analysis]
-    N[Opt-in volunteer computers] --> X
-    X --> V[Independent verification]
-    V --> I[Replicated evidence index]
-    I -->|Signed data updates| B[Local browser protection]
-    V -->|Results and failure cases| R[Improvement agents]
-    R --> G[GitHub proposals and independent tests]
-    G -->|Approved research software| X
-    G -->|Packaged application releases| B
-```
+- [Detailed system diagrams and trust boundaries](detailed-architecture.md)
+- [Component responsibilities, owned data, and interfaces](architecture-components.md)
+- [End-to-end workflows and failure recovery](architecture-workflows.md)
+- [Signed records and v1 API contracts](network-protocol.md)
+- [Five-slide presentation and PowerPoint](../presentations/README.md)
+
+The private protection path stays on the user's device. The separate research path processes approved public or synthetic material and returns verified data and reviewed software releases. The diagrams label these boundaries and the artifacts crossing them.
 
 ## Components
 

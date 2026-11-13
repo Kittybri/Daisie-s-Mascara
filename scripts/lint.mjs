@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import assert from 'node:assert/strict';
+import { validateExtensionFiles } from './extension-files.mjs';
 
 export async function filesIn(directory) {
   const entries = await fs.readdir(directory, { withFileTypes: true });
@@ -9,7 +10,7 @@ export async function filesIn(directory) {
   return nested.flat().sort();
 }
 
-const files = await filesIn('extension');
+const files = (await validateExtensionFiles()).map(file => path.join('extension', file));
 for (const file of [...files, ...await filesIn('scripts'), ...await filesIn('tests')]) {
   if (/\.m?js$/.test(file)) {
     const result = spawnSync(process.execPath, ['--check', file], { encoding: 'utf8' });

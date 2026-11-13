@@ -86,20 +86,21 @@ export function collectPageSignals() {
   let insecurePasswordForms = 0;
   let crossOriginPasswordForms = 0;
   let nonWebPasswordForms = 0;
-  for (const form of forms) {
+  const inspectDestination = value => {
     try {
-      const target = new URL(form.getAttribute('action') || base, document.baseURI);
+      const target = new URL(value || base, document.baseURI);
       if (target.protocol === 'http:') insecurePasswordForms++;
       if (!['http:', 'https:'].includes(target.protocol)) nonWebPasswordForms++;
       else if (target.origin !== origin) crossOriginPasswordForms++;
-      // A submit button may override the form destination.
-      for (const control of overridesByForm.get(form)) {
-        const action = new URL(control.getAttribute('formaction') || base, document.baseURI);
-        if (action.protocol === 'http:') insecurePasswordForms++;
-        if (!['http:', 'https:'].includes(action.protocol)) nonWebPasswordForms++;
-        else if (action.origin !== origin) crossOriginPasswordForms++;
-      }
     } catch { nonWebPasswordForms++; }
+  };
+  for (const form of forms) {
+    inspectDestination(form.getAttribute('action'));
+    // Each override is independent: a malformed destination must not stop
+    // inspection of the remaining ways to submit this form.
+    for (const control of overridesByForm.get(form)) {
+      inspectDestination(control.getAttribute('formaction'));
+    }
   }
   const anchors = document.querySelectorAll('a[href]');
   let mismatchedLinks = 0;

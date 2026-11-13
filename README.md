@@ -1,4 +1,4 @@
-# Daisie's Mascara — Daisie Mascara
+# Daisie Mascara
 
 A Chrome Manifest V3 extension that automatically checks webpages for phishing warning signs, entirely on your device. Results explain the observed clues and never certify a website as safe. A built-in dataset view presents the supplied workbook's analysis and all 60 original column names.
 
@@ -8,12 +8,13 @@ A Chrome Manifest V3 extension that automatically checks webpages for phishing w
 
 [![Daisie Mascara presentation cover — open the team presentation in Canva](presentations/slide-1.png)](https://canva.link/h31ufynec0q7l70)
 
-[Download the five-slide PowerPoint](presentations/daisie-mascara-digital-immune-system.pptx) · [View all five slide previews](presentations/README.md)
+[Download the five-slide PowerPoint](presentations/daisie-mascara-digital-immune-system.pptx) · [View all five slide previews](presentations/README.md) · [Explore the full architecture](docs/detailed-architecture.md)
 
 ## Project materials
 
 - [Current extension ZIP](downloads/tidecheck-0.2.0.zip)
-- [Collective defense architecture](docs/architecture.md)
+- [Collective defense architecture](docs/architecture.md) and [detailed system design](docs/detailed-architecture.md)
+- [Component contracts](docs/architecture-components.md) and [execution / RSI workflows](docs/architecture-workflows.md)
 - [Compute, blockchain, and token flow](docs/compute-and-token-flow.md)
 - [Dataset findings](docs/data-findings.md) and [column guide](docs/columns.md)
 - [Unique domains and recurring phishing](docs/domain-analysis.md)
@@ -56,7 +57,9 @@ npm run lint
 npm run build
 ```
 
-The package is `dist/tidecheck-0.2.0.zip`; only files from `extension/` are included. A SHA-256 file is written beside it. The raw dataset is never bundled; the schema and aggregate summary are included.
+The package is `dist/tidecheck-0.2.0.zip`. A shared, explicit allowlist controls which extension files can enter the ZIP; unexpected files and symlinks stop the build. File order and archive metadata are normalized so identical source files produce identical ZIP bytes. A SHA-256 file is written beside the package. The raw dataset is never bundled; the schema and aggregate summary are included.
+
+[Project checks](https://github.com/Kittybri/Daisie-s-Mascara/actions/workflows/checks.yml) run lint, regression tests, and the package build on Node.js 22 and 24. The workflow does not deploy or submit the extension to a store.
 
 `npm run test:browser` runs the integration checks with Playwright from the Codex bundled runtime. Outside that environment, set `PLAYWRIGHT_MODULE_PATH` to an installed Playwright `index.mjs` and install its Chromium browser. Tests use the shipping permissions in a disposable profile with intercepted reserved test-domain fixtures. Automatic checks require HTTP and HTTPS website access, declared in the manifest.
 
@@ -76,4 +79,4 @@ python3 scripts/profile_dataset.py /path/to/Phishing_Dataset_Anonymized.xlsx
 
 ## Store release state
 
-Version 0.2.0 is a local release candidate. Public release still needs a Chrome Web Store developer account, public publisher/support details, a hosted public privacy policy, and Google's review. The user authorizes an available signed-in account. See `docs/store-listing.md`, `docs/release-review.md`, and `.pushlive/deploy.md` for the prepared listing and release workflow. No live store listing is claimed.
+Version 0.2.0 is an unpublished release candidate and can receive fixes before submission. Public release still needs a Chrome Web Store developer account, public publisher/support details, a hosted public privacy policy, and Google's review. See `docs/store-listing.md`, `docs/release-review.md`, and `.pushlive/deploy.md` for the prepared listing and release workflow. No live store listing is claimed.
