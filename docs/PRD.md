@@ -1,4 +1,4 @@
-# TideCheck product requirements
+# Daisie Mascara product requirements
 
 Version: 0.2.0 release candidate
 
@@ -6,11 +6,11 @@ State: implemented locally; final browser validation and publication pending.
 
 ## Purpose and audience
 
-TideCheck helps Chrome users inspect the page they are visiting for understandable phishing warning signs before sharing sensitive information. The initial release turns a phishing-analysis project into a small browser utility. The datathon brief is reference material; its separate presentation deliverable is not part of this extension release request.
+Daisie Mascara helps Chrome users inspect the page they are visiting for understandable phishing warning signs before sharing sensitive information. The initial release turns a phishing-analysis project into a small browser utility. The datathon brief is reference material; its separate presentation deliverable is not part of this extension release request.
 
 ## Core user flow
 
-1. With automatic checks enabled, TideCheck checks an HTTP or HTTPS page after it loads. It also checks open web tabs on installation and checks an activated tab when a current result is unavailable.
+1. With automatic checks enabled, Daisie Mascara checks an HTTP or HTTPS page after it loads. It also checks open web tabs on installation and checks an activated tab when a current result is unavailable.
 2. The user opens the popup to read the concern level and its explanations. **Scan again** refreshes the check after page content changes.
 3. The user can disable automatic checks, run manual checks, mark a domain as familiar, and manage those preferences in settings.
 4. **Dataset analysis** opens the bundled aggregate findings and searchable list of all 60 original columns. The optional SynthID button opens Google's external detector without sending page media.
@@ -47,7 +47,7 @@ Dataset statistics, if included in development records, must identify their deno
 - Only the top-level page is checked. Embedded frames and shadow-root content are not traversed. Processing is bounded to 500 links, 200 password controls, and 100 submission overrides per inspected form.
 - Browser-restricted pages cannot be inspected.
 - Marking a domain as familiar records a user preference and does not verify ownership or legitimacy.
-- The scanner does not use a remote reputation database or AI service. SynthID is an external link, not an integrated detector. The user chooses any media uploaded there, and TideCheck does not receive the result.
+- The scanner does not use a remote reputation database or AI service. SynthID is an external link, not an integrated detector. The user chooses any media uploaded there, and Daisie Mascara does not receive the result.
 - Scan results shown to the user omit URL paths, queries, fragments, and embedded credentials. The original address is held temporarily in extension memory to detect a stale scan. Navigation clears the cached result and badge.
 
 ## Release status

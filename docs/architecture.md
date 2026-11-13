@@ -1,6 +1,6 @@
-# TideCheck collective defense architecture
+# Daisie Mascara collective defense architecture
 
-TideCheck’s proposed network combines local browser protection with voluntary research compute and a shared evidence index. Its organizing idea is a digital immune system: one independently verified discovery can inform protection across participating devices, while useful evidence and improvements accumulate over time.
+Daisie Mascara’s proposed network combines local browser protection with voluntary research compute and a shared evidence index. Its organizing idea is a digital immune system: one independently verified discovery can inform protection across participating devices, while useful evidence and improvements accumulate over time.
 
 ## Project status
 

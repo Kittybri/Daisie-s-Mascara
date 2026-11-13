@@ -1,4 +1,4 @@
-"""Generate the vector-style TideCheck mark at native icon resolutions."""
+"""Generate the vector-style Daisie Mascara mark at native icon resolutions."""
 from pathlib import Path
 from PIL import Image, ImageDraw
 

@@ -113,7 +113,7 @@ test('navigation during a pending badge write cannot restore a stale result or t
   assert.equal((await scan).ok, false);
   await cleared;
   assert.equal(badge.text, '');
-  assert.equal(badge.title, 'TideCheck: check this page');
+  assert.equal(badge.title, 'Daisie Mascara: check this page');
   assert.equal((await send({ type: 'GET_ACTIVE_STATUS' })).result, null);
 });
 test('same-URL reload during a pending badge write invalidates the scan', async () => {
@@ -126,7 +126,7 @@ test('same-URL reload during a pending badge write invalidates the scan', async 
   assert.equal((await scan).ok, false);
   await cleared;
   assert.equal(badge.text, '');
-  assert.equal(badge.title, 'TideCheck: check this page');
+  assert.equal(badge.title, 'Daisie Mascara: check this page');
   assert.equal((await send({ type: 'GET_ACTIVE_STATUS' })).result, null);
 });
 test('a newer scan wins over an older pending badge write', async () => {

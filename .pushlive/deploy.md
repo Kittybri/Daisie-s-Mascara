@@ -1,8 +1,8 @@
-# TideCheck Chrome Web Store release contract
+# Daisie Mascara Chrome Web Store release contract
 
 ## Target and authorization
 
-- Product: TideCheck, a Chrome Manifest V3 extension.
+- Product: Daisie Mascara, a Chrome Manifest V3 extension.
 - Intended target: an available signed-in Chrome Web Store developer account and public store listing, as authorized by the user.
 - The user requested build and release. That request authorizes the relevant release once the required checks and account prerequisites are satisfied; do not ask for a second general publishing approval.
 - Verify developer registration and record the available signed-in account used. Publisher name, support email, public privacy policy host, and store item ID still require real values; do not invent them.

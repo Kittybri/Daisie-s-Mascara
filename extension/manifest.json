@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "TideCheck - Phishing Warning Signs",
-  "short_name": "TideCheck",
+  "name": "Daisie Mascara - Phishing Warning Signs",
+  "short_name": "Daisie Mascara",
   "version": "0.2.0",
   "description": "Automatically check webpages for phishing warning signs, with local explanations and a view of the supporting dataset.",
   "minimum_chrome_version": "120",
@@ -9,7 +9,7 @@
   "host_permissions": ["http://*/*", "https://*/*"],
   "background": { "service_worker": "background.js", "type": "module" },
   "action": {
-    "default_title": "TideCheck: check this page",
+    "default_title": "Daisie Mascara: check this page",
     "default_popup": "popup.html",
     "default_icon": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png" }
   },

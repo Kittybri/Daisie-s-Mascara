@@ -1,4 +1,4 @@
-# TideCheck presentation
+# Daisie Mascara presentation
 
 [Download the five-slide PowerPoint](tidecheck-digital-immune-system.pptx)
 

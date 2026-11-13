@@ -1,4 +1,4 @@
-# TideCheck 0.2.0 release review
+# Daisie Mascara 0.2.0 release review
 
 State: local release candidate. Not submitted and not published. Automated checks passed with the production manifest. Native Chrome showed the live scanner preview and dataset page, but regular-profile extension installation remains incomplete because the folder picker kept Select disabled. Publisher details and public policy hosting remain prerequisites to submission.
 

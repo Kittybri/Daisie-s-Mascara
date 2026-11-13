@@ -1,4 +1,4 @@
-# TideCheck release log
+# Daisie Mascara release log
 
 ## 0.2.0 - release candidate
 

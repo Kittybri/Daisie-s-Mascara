@@ -1,4 +1,4 @@
-# Daisie's Mascara — TideCheck
+# Daisie's Mascara — Daisie Mascara
 
 A Chrome Manifest V3 extension that automatically checks webpages for phishing warning signs, entirely on your device. Results explain the observed clues and never certify a website as safe. A built-in dataset view presents the supplied workbook's analysis and all 60 original column names.
 
@@ -6,7 +6,7 @@ A Chrome Manifest V3 extension that automatically checks webpages for phishing w
 
 [**Open the presentation in Canva**](https://canva.link/h31ufynec0q7l70)
 
-[![TideCheck presentation cover — open the team presentation in Canva](presentations/slide-1.png)](https://canva.link/h31ufynec0q7l70)
+[![Daisie Mascara presentation cover — open the team presentation in Canva](presentations/slide-1.png)](https://canva.link/h31ufynec0q7l70)
 
 [Download the five-slide PowerPoint](presentations/tidecheck-digital-immune-system.pptx) · [View all five slide previews](presentations/README.md)
 
@@ -25,7 +25,7 @@ The opt-in compute network, community index, and recursive improvement loop are 
 
 1. Open `chrome://extensions` in Chrome.
 2. Turn on **Developer mode**, choose **Load unpacked**, and select this project's `extension` folder.
-3. Open a normal HTTP or HTTPS website. TideCheck checks it after loading; select TideCheck in the extension menu to see the result. **Scan again** refreshes it.
+3. Open a normal HTTP or HTTPS website. Daisie Mascara checks it after loading; select Daisie Mascara in the extension menu to see the result. **Scan again** refreshes it.
 4. Open **Settings and privacy** to disable automatic checks or manage familiar-domain markers. **Dataset analysis** opens the supplied data summary and column list.
 
 Chrome restricts scans of browser settings, Chrome Web Store pages, local files, and some other special pages. Automatic scans are a snapshot after page load or tab activation, with limits explained in settings. The extension does not block navigation or continuously inspect later page changes.
@@ -44,7 +44,7 @@ Saved data consists of familiar-domain choices and the automatic-check setting. 
 
 ## SynthID
 
-TideCheck does not detect SynthID watermarks. It shows **Not checked** and provides a link to Google's official detector at `https://synthid.com/`. Opening the link sends no page media; the user chooses any uploads. No public, universal browser-local detector is integrated, and the absence of a detection must never be treated as proof of human authorship.
+Daisie Mascara does not detect SynthID watermarks. It shows **Not checked** and provides a link to Google's official detector at `https://synthid.com/`. Opening the link sends no page media; the user chooses any uploads. No public, universal browser-local detector is integrated, and the absence of a detection must never be treated as proof of human authorship.
 
 ## Development and packaging
 

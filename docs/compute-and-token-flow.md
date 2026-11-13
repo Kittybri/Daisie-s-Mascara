@@ -1,6 +1,6 @@
 # Compute blockchain and token flow
 
-This is a proposed design for TideCheck's collective research network. No blockchain, transferable token, or autonomous improvement service is deployed in the current extension.
+This is a proposed design for Daisie Mascara's collective research network. No blockchain, transferable token, or autonomous improvement service is deployed in the current extension.
 
 ## Two meanings of token
 

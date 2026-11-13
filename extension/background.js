@@ -25,7 +25,7 @@ function invalidateTab(tabId) {
 async function activeTab() {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   if (!tab || !Number.isInteger(tab.id) || !tab.url || !/^https?:\/\//i.test(tab.url)) {
-    throw new Error('Open an HTTP or HTTPS webpage, then click TideCheck again. Browser settings, the Web Store and local files cannot be scanned.');
+    throw new Error('Open an HTTP or HTTPS webpage, then click Daisie Mascara again. Browser settings, the Web Store and local files cannot be scanned.');
   }
   return tab;
 }
@@ -55,7 +55,7 @@ function queueBadge(tabId, result, generation, failed = false) {
       await chrome.action.setBadgeBackgroundColor({ tabId, color: result.level === 'high' ? '#BA3C2E' : '#986318' });
       if (generationFor(tabId) !== generation) return false;
     }
-    await chrome.action.setTitle({ tabId, title: failed ? 'TideCheck: check unavailable' : result ? `TideCheck: ${result.level === 'high' ? 'high concern' : result.level === 'medium' ? 'review suggested' : 'no strong warning signs'} at last scan` : 'TideCheck: check this page' });
+    await chrome.action.setTitle({ tabId, title: failed ? 'Daisie Mascara: check unavailable' : result ? `Daisie Mascara: ${result.level === 'high' ? 'high concern' : result.level === 'medium' ? 'review suggested' : 'no strong warning signs'} at last scan` : 'Daisie Mascara: check this page' });
     return generationFor(tabId) === generation;
   });
   badgeQueues.set(tabId, task);
