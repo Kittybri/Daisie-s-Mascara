@@ -1,0 +1,101 @@
+rows 215,795 | phishing 92,300 | legitimate 123,495 | hosts 201,833 | fingerprints 138,424 | structure signals 26
+hosts carrying both labels: 43 | legitimate rows per legitimate host: max 1
+phishing sightings (host x fingerprint): 84,411 | legitimate sightings: 123,495
+
+=== A. HOLD-OUT VIEW: a knowledge base holding a random share of all hosts, tested on the hosts outside it ===
+(30 random draws per setting; 'caught' = share of held-out phishing pages whose structure is on the list; mean [min-max])
+
+  listed after 1 sighting(s) on phishing hosts:
+    share of hosts known    0.1% | caught  27.36% [21.43%-30.86%] | false alarms  0.00 avg, 0 max, of 123,369 legitimate pages tested
+    share of hosts known    0.2% | caught  36.29% [33.61%-38.98%] | false alarms  0.00 avg, 0 max, of 123,245 legitimate pages tested
+    share of hosts known    0.5% | caught  46.09% [44.01%-47.72%] | false alarms  0.07 avg, 2 max, of 122,874 legitimate pages tested
+    share of hosts known    1.0% | caught  52.63% [50.78%-54.15%] | false alarms  0.17 avg, 2 max, of 122,254 legitimate pages tested
+    share of hosts known    2.0% | caught  59.16% [57.16%-60.96%] | false alarms  0.23 avg, 2 max, of 121,014 legitimate pages tested
+    share of hosts known    5.0% | caught  67.78% [66.71%-69.10%] | false alarms  1.00 avg, 3 max, of 117,323 legitimate pages tested
+    share of hosts known   10.0% | caught  73.40% [72.49%-74.60%] | false alarms  1.43 avg, 3 max, of 111,155 legitimate pages tested
+    share of hosts known   20.0% | caught  78.01% [77.37%-78.90%] | false alarms  1.43 avg, 3 max, of 98,828 legitimate pages tested
+    share of hosts known   50.0% | caught  83.14% [81.92%-84.74%] | false alarms  0.90 avg, 3 max, of 61,786 legitimate pages tested
+    share of hosts known   80.0% | caught  85.50% [83.53%-87.19%] | false alarms  0.33 avg, 2 max, of 24,723 legitimate pages tested
+
+  listed after 2 sighting(s) on phishing hosts:
+    share of hosts known    0.1% | caught  15.07% [ 3.46%-19.55%] | false alarms  0.00 avg, 0 max, of 123,369 legitimate pages tested
+    share of hosts known    0.2% | caught  23.21% [17.64%-27.26%] | false alarms  0.00 avg, 0 max, of 123,245 legitimate pages tested
+    share of hosts known    0.5% | caught  35.71% [33.16%-39.39%] | false alarms  0.00 avg, 0 max, of 122,874 legitimate pages tested
+    share of hosts known    1.0% | caught  43.38% [41.24%-44.63%] | false alarms  0.00 avg, 0 max, of 122,254 legitimate pages tested
+    share of hosts known    2.0% | caught  49.93% [48.29%-51.13%] | false alarms  0.00 avg, 0 max, of 121,014 legitimate pages tested
+    share of hosts known    5.0% | caught  58.97% [58.00%-60.08%] | false alarms  0.27 avg, 2 max, of 117,323 legitimate pages tested
+    share of hosts known   10.0% | caught  65.93% [65.12%-66.59%] | false alarms  0.67 avg, 2 max, of 111,155 legitimate pages tested
+    share of hosts known   20.0% | caught  71.95% [71.27%-73.39%] | false alarms  1.07 avg, 2 max, of 98,828 legitimate pages tested
+    share of hosts known   50.0% | caught  78.00% [76.76%-79.37%] | false alarms  0.83 avg, 3 max, of 61,786 legitimate pages tested
+    share of hosts known   80.0% | caught  80.81% [78.90%-82.44%] | false alarms  0.23 avg, 2 max, of 24,723 legitimate pages tested
+
+  listed after 3 sighting(s) on phishing hosts:
+    share of hosts known    0.1% | caught   8.96% [ 0.00%-14.35%] | false alarms  0.00 avg, 0 max, of 123,369 legitimate pages tested
+    share of hosts known    0.2% | caught  17.33% [10.45%-22.05%] | false alarms  0.00 avg, 0 max, of 123,245 legitimate pages tested
+    share of hosts known    0.5% | caught  29.91% [26.60%-32.95%] | false alarms  0.00 avg, 0 max, of 122,874 legitimate pages tested
+    share of hosts known    1.0% | caught  38.16% [35.30%-40.96%] | false alarms  0.00 avg, 0 max, of 122,254 legitimate pages tested
+    share of hosts known    2.0% | caught  45.10% [43.97%-46.84%] | false alarms  0.00 avg, 0 max, of 121,014 legitimate pages tested
+    share of hosts known    5.0% | caught  53.98% [53.10%-55.07%] | false alarms  0.07 avg, 2 max, of 117,323 legitimate pages tested
+    share of hosts known   10.0% | caught  61.12% [60.29%-62.00%] | false alarms  0.13 avg, 2 max, of 111,155 legitimate pages tested
+    share of hosts known   20.0% | caught  67.99% [67.22%-69.25%] | false alarms  0.53 avg, 2 max, of 98,828 legitimate pages tested
+    share of hosts known   50.0% | caught  74.98% [73.80%-76.46%] | false alarms  0.60 avg, 2 max, of 61,786 legitimate pages tested
+    share of hosts known   80.0% | caught  78.13% [76.22%-79.72%] | false alarms  0.13 avg, 2 max, of 24,723 legitimate pages tested
+
+=== B. CEILING: everything pooled (leave-one-host-out) ===
+  structure seen on >= 1 OTHER phishing hosts and on no legitimate host: 86.546% of phishing pages (79,882) | fingerprints that qualify: 4,489
+  structure seen on >= 2 OTHER phishing hosts and on no legitimate host: 81.882% of phishing pages (75,577) | fingerprints that qualify: 2,596
+  structure seen on >= 3 OTHER phishing hosts and on no legitimate host: 79.445% of phishing pages (73,328) | fingerprints that qualify: 1,937
+  all-phishing fingerprints: 15,032 | seen on >= 3 hosts: 2,596 | fingerprints seen on both a phishing and a legitimate host: 2
+
+=== C. ARRIVAL VIEW: the same stream of sightings, pooled in one list or split among N isolated lists ===
+(hosts arrive in random order and are assigned at random to one of N equal defenders; a page is 'recognized' on arrival if its
+ structure was already seen on >= m earlier phishing hosts in the same list and on no earlier legitimate host; 30 random draws; mean [min-max];
+ 'not recognized' is out of 92,300 phishing pages; false alarms are out of 123,495 legitimate pages)
+
+  listed after 1 sighting(s) on phishing hosts:
+    one pooled list          | recognized  80.91% [80.30%-81.19%] | pages >20 lines  72.27% | not recognized  17,617 | false alarms 1.50 avg, 2 max
+    split among     2 lists | recognized  76.78% [76.20%-77.13%] | pages >20 lines  67.92% | not recognized  21,434 | false alarms 1.73 avg, 3 max
+    split among     5 lists | recognized  70.33% [69.70%-70.69%] | pages >20 lines  61.88% | not recognized  27,381 | false alarms 1.40 avg, 2 max
+    split among    10 lists | recognized  64.62% [63.98%-65.17%] | pages >20 lines  57.13% | not recognized  32,655 | false alarms 0.53 avg, 2 max
+    split among    20 lists | recognized  58.32% [57.75%-58.79%] | pages >20 lines  52.36% | not recognized  38,468 | false alarms 0.47 avg, 2 max
+    split among    50 lists | recognized  49.46% [49.14%-49.88%] | pages >20 lines  45.85% | not recognized  46,645 | false alarms 0.30 avg, 2 max
+    split among   100 lists | recognized  42.35% [42.11%-42.60%] | pages >20 lines  40.88% | not recognized  53,211 | false alarms 0.13 avg, 1 max
+    split among   200 lists | recognized  34.90% [34.71%-35.28%] | pages >20 lines  35.63% | not recognized  60,086 | false alarms 0.10 avg, 1 max
+    split among   500 lists | recognized  24.56% [24.40%-24.91%] | pages >20 lines  28.36% | not recognized  69,632 | false alarms 0.00 avg, 0 max
+    split among 1,000 lists | recognized  17.33% [17.17%-17.50%] | pages >20 lines  22.53% | not recognized  76,304 | false alarms 0.00 avg, 0 max
+
+  listed after 2 sighting(s) on phishing hosts:
+    one pooled list          | recognized  75.32% [74.80%-75.68%] | pages >20 lines  66.09% | not recognized  22,778 | false alarms 1.13 avg, 2 max
+    split among     2 lists | recognized  70.41% [69.73%-70.92%] | pages >20 lines  61.51% | not recognized  27,314 | false alarms 1.03 avg, 3 max
+    split among     5 lists | recognized  62.65% [62.27%-63.05%] | pages >20 lines  55.12% | not recognized  34,472 | false alarms 0.70 avg, 2 max
+    split among    10 lists | recognized  55.87% [55.55%-56.40%] | pages >20 lines  50.23% | not recognized  40,729 | false alarms 0.17 avg, 1 max
+    split among    20 lists | recognized  48.83% [48.64%-49.21%] | pages >20 lines  45.35% | not recognized  47,228 | false alarms 0.07 avg, 1 max
+    split among    50 lists | recognized  39.50% [39.37%-39.65%] | pages >20 lines  38.79% | not recognized  55,843 | false alarms 0.00 avg, 0 max
+    split among   100 lists | recognized  31.90% [31.78%-32.02%] | pages >20 lines  33.47% | not recognized  62,858 | false alarms 0.00 avg, 0 max
+    split among   200 lists | recognized  23.73% [23.62%-23.83%] | pages >20 lines  27.86% | not recognized  70,400 | false alarms 0.00 avg, 0 max
+    split among   500 lists | recognized  13.53% [13.40%-13.61%] | pages >20 lines  20.22% | not recognized  79,816 | false alarms 0.00 avg, 0 max
+    split among 1,000 lists | recognized   7.69% [ 7.61%- 7.79%] | pages >20 lines  13.86% | not recognized  85,205 | false alarms 0.00 avg, 0 max
+
+  listed after 3 sighting(s) on phishing hosts:
+    one pooled list          | recognized  72.05% [71.50%-72.46%] | pages >20 lines  62.87% | not recognized  25,796 | false alarms 0.73 avg, 1 max
+    split among     2 lists | recognized  66.60% [66.10%-66.98%] | pages >20 lines  58.11% | not recognized  30,830 | false alarms 0.63 avg, 2 max
+    split among     5 lists | recognized  58.02% [57.77%-58.42%] | pages >20 lines  51.58% | not recognized  38,747 | false alarms 0.37 avg, 1 max
+    split among    10 lists | recognized  50.84% [50.63%-51.19%] | pages >20 lines  46.67% | not recognized  45,373 | false alarms 0.03 avg, 1 max
+    split among    20 lists | recognized  43.77% [43.63%-43.92%] | pages >20 lines  41.81% | not recognized  51,899 | false alarms 0.03 avg, 1 max
+    split among    50 lists | recognized  34.26% [34.15%-34.36%] | pages >20 lines  35.11% | not recognized  60,675 | false alarms 0.00 avg, 0 max
+    split among   100 lists | recognized  26.17% [26.10%-26.28%] | pages >20 lines  29.47% | not recognized  68,142 | false alarms 0.00 avg, 0 max
+    split among   200 lists | recognized  17.75% [17.63%-17.85%] | pages >20 lines  23.78% | not recognized  75,912 | false alarms 0.00 avg, 0 max
+    split among   500 lists | recognized   8.64% [ 8.56%- 8.72%] | pages >20 lines  15.87% | not recognized  84,323 | false alarms 0.00 avg, 0 max
+    split among 1,000 lists | recognized   4.16% [ 4.08%- 4.24%] | pages >20 lines   9.09% | not recognized  88,464 | false alarms 0.00 avg, 0 max
+
+  headline (3 sightings): pooled 72.1% vs 1-of-100 isolated 26.2% = 2.8x | extra pages not recognized when isolated: 42,346 of 92,300
+
+=== D. KNOWN-SITE LIST (URLSimilarityIndex = 100) crossed with pooled memory (leave-one-host-out, 3 sightings) ===
+  known site                                    | phishing     713 ( 0.772% of phishing) | legitimate 123,495 (100.000% of legitimate)
+  not a known site, structure seen before       | phishing  72,748 (78.817% of phishing) | legitimate       0 (  0.000% of legitimate)
+  not a known site, structure not seen before   | phishing  18,839 (20.411% of phishing) | legitimate       0 (  0.000% of legitimate)
+  of the 713 phishing pages that pass the known-site check, pooled memory recognizes 580 (81.3%)
+  share of phishing URLs that are not on the known-site list, whatever the page looks like: 99.23%
+  legitimate pages whose structure no other host shares: 99.84%
+
+saved collective.json
