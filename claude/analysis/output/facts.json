@@ -1,0 +1,1071 @@
+{
+ "n": 215795,
+ "n_phish": 92300,
+ "n_legit": 123495,
+ "phish_share": 0.42772075349289834,
+ "n_cols": 60,
+ "quality": {
+  "missing_cells": 0,
+  "full_row_duplicates": 0,
+  "dup_url_ids": 355,
+  "n_hosts": 201833,
+  "hosts_multi": 4832,
+  "n_tld_groups": 680,
+  "max_urls_one_host": 1093,
+  "share_phish_rows_on_multi_url_hosts": 0.20315276273022753
+ },
+ "rule_shape": {
+  "tp": 91699,
+  "fp": 0,
+  "fn": 601,
+  "tn": 123495,
+  "accuracy": 0.9972149493732477,
+  "recall": 0.9934886240520043,
+  "precision": 1.0,
+  "flagged": 91699,
+  "not_flagged": 124096
+ },
+ "rule_usi": {
+  "tp": 91587,
+  "fp": 0,
+  "fn": 713,
+  "tn": 123495,
+  "accuracy": 0.9966959382747514,
+  "recall": 0.9922751895991333,
+  "precision": 1.0,
+  "flagged": 91587,
+  "not_flagged": 124208
+ },
+ "rule_loc100": {
+  "tp": 70903,
+  "fp": 0,
+  "fn": 21397,
+  "tn": 123495,
+  "accuracy": 0.900845710048889,
+  "recall": 0.7681798483206934,
+  "precision": 1.0,
+  "flagged": 70903,
+  "not_flagged": 144892
+ },
+ "artefacts": {
+  "legit_with_path": 0,
+  "phish_with_path_share": 0.2841711809317443,
+  "legit_https_share": 1.0,
+  "phish_https_share": 0.49234019501625137,
+  "legit_usi100_share": 1.0,
+  "phish_usi100": 713,
+  "legit_one_url_per_host": 0.9996518077654966
+ },
+ "models": {
+  "gbm_url": {
+   "auc": 0.9988813622844617,
+   "pr_auc": 0.9990959832760916,
+   "accuracy": 0.9975485993651382,
+   "recall": 0.9946478873239437,
+   "precision": 0.9996189065885607,
+   "f1": 0.9971272014380286,
+   "tp": 91806,
+   "fp": 35,
+   "fn": 494,
+   "tn": 123460,
+   "fpr": 0.00028341228389813355,
+   "recall_at_fpr_0.001": 0.9952654387865656,
+   "recall_at_fpr_0.01": 0.996522210184182
+  },
+  "gbm_page": {
+   "auc": 0.9999640054555877,
+   "pr_auc": 0.9999549500736546,
+   "accuracy": 0.9982390694872448,
+   "recall": 0.997421451787649,
+   "precision": 0.9984599366621838,
+   "f1": 0.997940424055847,
+   "tp": 92062,
+   "fp": 142,
+   "fn": 238,
+   "tn": 123353,
+   "fpr": 0.001149844123243856,
+   "recall_at_fpr_0.001": 0.9972372697724811,
+   "recall_at_fpr_0.01": 0.9993932827735644
+  },
+  "gbm_combined": {
+   "auc": 0.9999999089360933,
+   "pr_auc": 0.9999998784408406,
+   "accuracy": 0.999935123612688,
+   "recall": 0.9999024918743229,
+   "precision": 0.999945826471353,
+   "f1": 0.9999241587033305,
+   "tp": 92291,
+   "fp": 5,
+   "fn": 9,
+   "tn": 123490,
+   "fpr": 4.048746912830479e-05,
+   "recall_at_fpr_0.001": 0.999967497291441,
+   "recall_at_fpr_0.01": 1.0
+  },
+  "gbm_combined_plus_usi": {
+   "auc": 0.9999999982453966,
+   "pr_auc": 0.9999999976526281,
+   "accuracy": 0.9999907319446697,
+   "recall": 0.9999783315276273,
+   "precision": 1.0,
+   "f1": 0.9999891656464317,
+   "tp": 92298,
+   "fp": 0,
+   "fn": 2,
+   "tn": 123495,
+   "fpr": 0.0,
+   "recall_at_fpr_0.001": 1.0,
+   "recall_at_fpr_0.01": 1.0
+  },
+  "gbm_combined_randomcv": {
+   "auc": 0.9999999081465218,
+   "pr_auc": 0.9999998773931427,
+   "accuracy": 0.9999490256956834,
+   "recall": 0.9999024918743229,
+   "precision": 0.9999783298841732,
+   "f1": 0.9999404094413116,
+   "tp": 92291,
+   "fp": 2,
+   "fn": 9,
+   "tn": 123493,
+   "fpr": 1.6194987651321917e-05,
+   "recall_at_fpr_0.001": 0.999967497291441,
+   "recall_at_fpr_0.01": 1.0
+  },
+  "logit_url": {
+   "auc": 0.9985469666704785,
+   "pr_auc": 0.99884748547839,
+   "accuracy": 0.9965986236937835,
+   "recall": 0.9922968580715059,
+   "precision": 0.9997489411867441,
+   "f1": 0.9960089608073427,
+   "tp": 91589,
+   "fp": 23,
+   "fn": 711,
+   "tn": 123472,
+   "fpr": 0.00018624235799020203,
+   "recall_at_fpr_0.001": 0.9931310942578548,
+   "recall_at_fpr_0.01": 0.9951462621885158
+  },
+  "logit_page": {
+   "auc": 0.9998656261694157,
+   "pr_auc": 0.9998417399469184,
+   "accuracy": 0.9962093653699112,
+   "recall": 0.9956663055254604,
+   "precision": 0.995472172274096,
+   "f1": 0.9955692294359162,
+   "tp": 91900,
+   "fp": 418,
+   "fn": 400,
+   "tn": 123077,
+   "fpr": 0.0033847524191262805,
+   "recall_at_fpr_0.001": 0.9884723726977248,
+   "recall_at_fpr_0.01": 0.9978223185265439
+  },
+  "logit_combined": {
+   "auc": 0.9999920548057333,
+   "pr_auc": 0.9999922686328019,
+   "accuracy": 0.9998285409763896,
+   "recall": 0.9997074756229686,
+   "precision": 0.999891637679746,
+   "f1": 0.9997995481707415,
+   "tp": 92273,
+   "fp": 10,
+   "fn": 27,
+   "tn": 123485,
+   "fpr": 8.097493825660957e-05,
+   "recall_at_fpr_0.001": 0.9999133261105092,
+   "recall_at_fpr_0.01": 0.999967497291441
+  },
+  "tree_d3_combined": {
+   "auc": 0.9909415052574272,
+   "pr_auc": 0.9828627563459943,
+   "accuracy": 0.98898491623995,
+   "recall": 0.9890465872156013,
+   "precision": 0.985257136689871,
+   "f1": 0.9871482252439783,
+   "tp": 91289,
+   "fp": 1366,
+   "fn": 1011,
+   "tn": 122129,
+   "fpr": 0.011061176565852869,
+   "recall_at_fpr_0.001": 0.007995666305525461,
+   "recall_at_fpr_0.01": 0.7798483206933912
+  },
+  "tree_d3_page": {
+   "auc": 0.9905945034334733,
+   "pr_auc": 0.9821572111678023,
+   "accuracy": 0.9836650524803633,
+   "recall": 0.9762296858071506,
+   "precision": 0.9854435294246312,
+   "f1": 0.9808149692223124,
+   "tp": 90106,
+   "fp": 1331,
+   "fn": 2194,
+   "tn": 122164,
+   "fpr": 0.010777764281954734,
+   "recall_at_fpr_0.001": 0.0017226435536294691,
+   "recall_at_fpr_0.01": 0.7735752979414952
+  },
+  "scorecard5": {
+   "auc": 0.9885850168202844,
+   "le0": {
+    "tp": 65073,
+    "fp": 316,
+    "fn": 27227,
+    "tn": 123179,
+    "recall": 0.7050162513542795,
+    "precision": 0.9951673828931472,
+    "accuracy": 0.8723649760189068,
+    "fpr": 0.0025588080489088627
+   },
+   "le1": {
+    "tp": 87447,
+    "fp": 3635,
+    "fn": 4853,
+    "tn": 119860,
+    "recall": 0.9474214517876489,
+    "precision": 0.9600909070947059,
+    "accuracy": 0.9606663731782479,
+    "fpr": 0.02943439005627758
+   },
+   "le2": {
+    "tp": 91318,
+    "fp": 17214,
+    "fn": 982,
+    "tn": 106281,
+    "recall": 0.9893607800650054,
+    "precision": 0.8413924003980393,
+    "accuracy": 0.9156792326050186,
+    "fpr": 0.13939025871492772
+   },
+   "le3": {
+    "tp": 92231,
+    "fp": 49113,
+    "fn": 69,
+    "tn": 74382,
+    "recall": 0.999252437703142,
+    "precision": 0.6525285827484718,
+    "accuracy": 0.7720892513728307,
+    "fpr": 0.39769221425968665
+   }
+  }
+ },
+ "markers": [
+  {
+   "name": "Links to social media",
+   "col": "HasSocialNet",
+   "legit": 0.7949552613466132,
+   "phish": 0.005027085590465872,
+   "phish_rate_if_present": 0.004704117116295102,
+   "phish_rate_if_absent": 0.7838645248297171
+  },
+  {
+   "name": "Copyright notice",
+   "col": "HasCopyrightInfo",
+   "legit": 0.807976031418276,
+   "phish": 0.05723726977248104,
+   "phish_rate_if_present": 0.05028363664052387,
+   "phish_rate_if_absent": 0.7858413633038626
+  },
+  {
+   "name": "Meta description",
+   "col": "HasDescription",
+   "legit": 0.7360702862464067,
+   "phish": 0.04421451787648971,
+   "phish_rate_if_present": 0.04296603566991641,
+   "phish_rate_if_absent": 0.7302111527732943
+  },
+  {
+   "name": "Title matches the domain",
+   "col": "title_match",
+   "legit": 0.7576501072917932,
+   "phish": 0.16484290357529793,
+   "phish_rate_if_present": 0.13986817550859065,
+   "phish_rate_if_absent": 0.7203263124451006
+  },
+  {
+   "name": "Favicon",
+   "col": "HasFavicon",
+   "legit": 0.5667193003765335,
+   "phish": 0.08763813651137595,
+   "phish_rate_if_present": 0.10360418054203596,
+   "phish_rate_if_absent": 0.6114697318452792
+  },
+  {
+   "name": "Submit button",
+   "col": "HasSubmitButton",
+   "legit": 0.661451880642941,
+   "phish": 0.08479956663055255,
+   "phish_rate_if_present": 0.08743981321148883,
+   "phish_rate_if_absent": 0.6689235203750337
+  },
+  {
+   "name": "Mobile-responsive",
+   "col": "IsResponsive",
+   "legit": 0.8543989635207904,
+   "phish": 0.31678223185265436,
+   "phish_rate_if_present": 0.2169821822148672,
+   "phish_rate_if_absent": 0.778127390735668
+  },
+  {
+   "name": "HTTPS padlock",
+   "col": "IsHTTPS",
+   "legit": 1.0,
+   "phish": 0.49234019501625137,
+   "phish_rate_if_present": 0.2689921746439522,
+   "phish_rate_if_absent": 1.0
+  },
+  {
+   "name": "Password field",
+   "col": "HasPasswordField",
+   "legit": 0.1384023644681971,
+   "phish": 0.05396533044420369,
+   "phish_rate_if_present": 0.22566030897476555,
+   "phish_rate_if_absent": 0.45074384943372464
+  },
+  {
+   "name": "Mentions payment ('Pay')",
+   "col": "Pay",
+   "legit": 0.36914854852423173,
+   "phish": 0.059978331527627306,
+   "phish_rate_if_present": 0.10828573664032548,
+   "phish_rate_if_absent": 0.5268930169853829
+  },
+  {
+   "name": "Mentions 'Bank'",
+   "col": "Bank",
+   "legit": 0.181108546904733,
+   "phish": 0.05457204767063922,
+   "phish_rate_if_present": 0.18381199138780427,
+   "phish_rate_if_absent": 0.46319907427066964
+  },
+  {
+   "name": "Has a page title",
+   "col": "HasTitle",
+   "legit": 0.9987610834446738,
+   "phish": 0.6773781148429036,
+   "phish_rate_if_present": 0.33638574441527136,
+   "phish_rate_if_absent": 0.9948882429588053
+  }
+ ],
+ "scorecard": [
+  {
+   "k": 0,
+   "n": 65389,
+   "phish": 65073,
+   "legit": 316,
+   "phish_rate": 0.9951673828931472
+  },
+  {
+   "k": 1,
+   "n": 25693,
+   "phish": 22374,
+   "legit": 3319,
+   "phish_rate": 0.8708208461448643
+  },
+  {
+   "k": 2,
+   "n": 17450,
+   "phish": 3871,
+   "legit": 13579,
+   "phish_rate": 0.22183381088825216
+  },
+  {
+   "k": 3,
+   "n": 32812,
+   "phish": 913,
+   "legit": 31899,
+   "phish_rate": 0.027825185907594783
+  },
+  {
+   "k": 4,
+   "n": 45744,
+   "phish": 68,
+   "legit": 45676,
+   "phish_rate": 0.0014865337530605106
+  },
+  {
+   "k": 5,
+   "n": 28707,
+   "phish": 1,
+   "legit": 28706,
+   "phish_rate": 3.4834709304350856e-05
+  }
+ ],
+ "scorecard_auc": 0.9885850168202844,
+ "richness": {
+  "median_loc_legit": 1104.0,
+  "median_loc_phish": 12.0,
+  "phish_le20_lines": 0.6175839653304442,
+  "phish_2_lines": 0.2614409534127844,
+  "legit_min_loc": 102.0,
+  "phish_zero_assets": 0.44362946912242684,
+  "median_extref_legit": 46.0,
+  "median_extref_phish": 0.0
+ },
+ "templates": {
+  "n_struct_features": 26,
+  "shared": {
+   "2": {
+    "phish": 0.8656121343445287,
+    "legit": 0.001562816308352565,
+    "legit_n": 193
+   },
+   "5": {
+    "phish": 0.7724702058504875,
+    "legit": 5.668245677962671e-05,
+    "legit_n": 7
+   },
+   "10": {
+    "phish": 0.7169772481040086,
+    "legit": 1.6194987651321917e-05,
+    "legit_n": 2
+   },
+   "100": {
+    "phish": 0.4722860238353196,
+    "legit": 0.0,
+    "legit_n": 0
+   },
+   "1000": {
+    "phish": 0.19249187432286025,
+    "legit": 0.0,
+    "legit_n": 0
+   }
+  },
+  "top1_pages": 5592,
+  "top1_hosts": 5554,
+  "top_cover": {
+   "1": 0.060585048754062835,
+   "5": 0.14407367280606717,
+   "10": 0.2033044420368364,
+   "20": 0.28515709642470205,
+   "50": 0.4065113759479957,
+   "100": 0.487670639219935,
+   "500": 0.6710942578548212
+  },
+  "shared_substantive": 0.6735983228036377,
+  "stub_share_of_phish": 0.6175839653304442,
+  "legit_unique_share": 0.9984371836916475,
+  "phish_unique_share": 0.13438786565547128,
+  "blocklist": {
+   "tp": 72085,
+   "fp": 2,
+   "recall": 0.7809859154929577
+  },
+  "top": [
+   {
+    "pages": 5592,
+    "phish": 1.0,
+    "hosts": 5554,
+    "tlds": 2,
+    "loc": 108.0,
+    "longest": 8125.0,
+    "title": 1.0,
+    "images": 0.0,
+    "scripts": 0.0,
+    "ext": 3.0,
+    "pw": 0.0
+   },
+   {
+    "pages": 2678,
+    "phish": 1.0,
+    "hosts": 2530,
+    "tlds": 3,
+    "loc": 198.0,
+    "longest": 869.0,
+    "title": 1.0,
+    "images": 0.0,
+    "scripts": 0.0,
+    "ext": 2.0,
+    "pw": 0.0
+   },
+   {
+    "pages": 2286,
+    "phish": 1.0,
+    "hosts": 2237,
+    "tlds": 174,
+    "loc": 9.0,
+    "longest": 50.0,
+    "title": 1.0,
+    "images": 0.0,
+    "scripts": 0.0,
+    "ext": 0.0,
+    "pw": 0.0
+   },
+   {
+    "pages": 1379,
+    "phish": 1.0,
+    "hosts": 1365,
+    "tlds": 4,
+    "loc": 68.0,
+    "longest": 80.0,
+    "title": 1.0,
+    "images": 0.0,
+    "scripts": 0.0,
+    "ext": 1.0,
+    "pw": 0.0
+   },
+   {
+    "pages": 1333,
+    "phish": 1.0,
+    "hosts": 1333,
+    "tlds": 67,
+    "loc": 2.0,
+    "longest": 2826.0,
+    "title": 1.0,
+    "images": 0.0,
+    "scripts": 1.0,
+    "ext": 1.0,
+    "pw": 0.0
+   },
+   {
+    "pages": 1363,
+    "phish": 1.0,
+    "hosts": 1251,
+    "tlds": 118,
+    "loc": 15.0,
+    "longest": 155.0,
+    "title": 1.0,
+    "images": 0.0,
+    "scripts": 0.0,
+    "ext": 0.0,
+    "pw": 0.0
+   },
+   {
+    "pages": 1042,
+    "phish": 1.0,
+    "hosts": 1039,
+    "tlds": 17,
+    "loc": 8.0,
+    "longest": 41.0,
+    "title": 1.0,
+    "images": 0.0,
+    "scripts": 0.0,
+    "ext": 0.0,
+    "pw": 0.0
+   },
+   {
+    "pages": 1048,
+    "phish": 1.0,
+    "hosts": 1035,
+    "tlds": 88,
+    "loc": 2.0,
+    "longest": 32.0,
+    "title": 0.0,
+    "images": 0.0,
+    "scripts": 0.0,
+    "ext": 0.0,
+    "pw": 0.0
+   }
+  ],
+  "n_fingerprints": 138424,
+  "n_shared_fingerprints": 4579,
+  "mixed_label_fingerprints": 2
+ },
+ "layers": {
+  "l1": {
+   "caught": 91722,
+   "false_alarms": 13
+  },
+  "l2": {
+   "caught": 436,
+   "false_alarms": 2
+  },
+  "l3": {
+   "caught": 138,
+   "false_alarms": 5
+  },
+  "missed": 4,
+  "total_false_alarms": 20,
+  "after_l1": 578,
+  "after_l2": 142,
+  "t_block": 0.8448078054844476,
+  "l1_recall": 0.9937378114842904,
+  "l1_fpr": 0.00010526741973359245,
+  "l1_precision_at_0.01": 0.9896216917987729,
+  "l1_precision_at_0.001": 0.9043023425440977
+ },
+ "funnel": {
+  "t_block": 0.8448078054844476,
+  "t_allow": 0.0016304826896597693,
+  "share_block": 0.42510252786209135,
+  "share_allow": 0.3064806876897055,
+  "share_grey": 0.26841678444820316,
+  "block_legit": 13,
+  "block_phish": 91722,
+  "allow_legit": 66044,
+  "allow_phish": 93,
+  "grey_legit": 57438,
+  "grey_phish": 485,
+  "stage2_block_phish": 482,
+  "stage2_block_legit": 4,
+  "stage2_allow_phish": 3,
+  "stage2_allow_legit": 57434
+ },
+ "base_rates": {
+  "url": {
+   "tpr": 0.9952654387865656,
+   "fpr": 0.000971699259079315,
+   "thr": 0.22024251676359707,
+   "by_prev": {
+    "0.4277": {
+     "precision": 0.9986954111085744,
+     "missed": 2025.070089668416,
+     "false_alarms": 556.0833198174192,
+     "caught": 425695.6834032299
+    },
+    "0.0500": {
+     "precision": 0.9817877271455652,
+     "missed": 236.72806067172039,
+     "false_alarms": 923.1142961253493,
+     "caught": 49763.27193932828
+    },
+    "0.0100": {
+     "precision": 0.9118630975127553,
+     "missed": 47.34561213434407,
+     "false_alarms": 961.9822664885218,
+     "caught": 9952.654387865656
+    },
+    "0.0010": {
+     "precision": 0.5062405814730059,
+     "missed": 4.734561213434408,
+     "false_alarms": 970.7275598202357,
+     "caught": 995.2654387865656
+    }
+   }
+  },
+  "page": {
+   "tpr": 0.9972372697724811,
+   "fpr": 0.0009878942467306368,
+   "thr": 0.5547069380774807,
+   "by_prev": {
+    "0.4277": {
+     "precision": 0.998676315818026,
+     "missed": 1181.6770546120072,
+     "false_alarms": 565.3513751477095,
+     "caught": 426539.07643828634
+    },
+    "0.0500": {
+     "precision": 0.9815257317360339,
+     "missed": 138.13651137594695,
+     "false_alarms": 938.4995343941049,
+     "caught": 49861.863488624054
+    },
+    "0.0100": {
+     "precision": 0.9106866985822089,
+     "missed": 27.62730227518939,
+     "false_alarms": 978.0153042633306,
+     "caught": 9972.37269772481
+    },
+    "0.0010": {
+     "precision": 0.5026033693258622,
+     "missed": 2.762730227518939,
+     "false_alarms": 986.9063524839061,
+     "caught": 997.237269772481
+    }
+   }
+  },
+  "combined": {
+   "tpr": 0.999967497291441,
+   "fpr": 0.0007368719381351472,
+   "thr": 0.006418849105444327,
+   "by_prev": {
+    "0.4277": {
+     "precision": 0.999015023596138,
+     "missed": 13.90208299543035,
+     "false_alarms": 421.69651752820965,
+     "caught": 427706.8514099029
+    },
+    "0.0500": {
+     "precision": 0.9861923000141295,
+     "missed": 1.6251354279517294,
+     "false_alarms": 700.0283412283899,
+     "caught": 49998.37486457205
+    },
+    "0.0100": {
+     "precision": 0.9320075400257314,
+     "missed": 0.3250270855903459,
+     "false_alarms": 729.5032187537957,
+     "caught": 9999.67497291441
+    },
+    "0.0010": {
+     "precision": 0.5759841142577126,
+     "missed": 0.03250270855903459,
+     "false_alarms": 736.1350661970121,
+     "caught": 999.967497291441
+    }
+   }
+  }
+ },
+ "stress_levels": [
+  "L0 today (as observed)",
+  "L1 + HTTPS (free certificate)",
+  "L2 + trust badges (title, favicon, description, copyright, social)",
+  "L3 full page clone (title still mismatched)",
+  "L4 full page clone + matching title"
+ ],
+ "stress": {
+  "url": {
+   "L0 today (as observed)": 0.9952654387865656,
+   "L1 + HTTPS (free certificate)": 0.8401300108342362,
+   "L2 + trust badges (title, favicon, description, copyright, social)": 0.8401300108342362,
+   "L3 full page clone (title still mismatched)": 0.8401300108342362,
+   "L4 full page clone + matching title": 0.8401300108342362
+  },
+  "page": {
+   "L0 today (as observed)": 0.9972372697724811,
+   "L1 + HTTPS (free certificate)": 0.9972372697724811,
+   "L2 + trust badges (title, favicon, description, copyright, social)": 0.934409534127844,
+   "L3 full page clone (title still mismatched)": 0.004777898158179849,
+   "L4 full page clone + matching title": 0.0009425785482123511
+  },
+  "combined": {
+   "L0 today (as observed)": 0.999967497291441,
+   "L1 + HTTPS (free certificate)": 0.9981798483206934,
+   "L2 + trust badges (title, favicon, description, copyright, social)": 0.995124593716143,
+   "L3 full page clone (title still mismatched)": 0.4808125677139762,
+   "L4 full page clone + matching title": 0.46975081256771395
+  },
+  "either": {
+   "L0 today (as observed)": 0.9999783315276273,
+   "L1 + HTTPS (free certificate)": 0.9984398699891658,
+   "L2 + trust badges (title, favicon, description, copyright, social)": 0.996240520043337,
+   "L3 full page clone (title still mismatched)": 0.8063705308775732,
+   "L4 full page clone + matching title": 0.8061971830985916
+  }
+ },
+ "stress_fpr": {
+  "url": 0.000971699259079315,
+  "page": 0.0009878942467306368,
+  "combined": 0.0007368719381351472,
+  "either": 0.0008988218146483663
+ },
+ "stress_lookalike": {
+  "url": {
+   "L0 today (as observed)": 0.9835480901978831,
+   "L1 + HTTPS (free certificate)": 0.9835480901978831,
+   "L2 + trust badges (title, favicon, description, copyright, social)": 0.9835480901978831,
+   "L3 full page clone (title still mismatched)": 0.9835480901978831,
+   "L4 full page clone + matching title": 0.9835480901978831
+  },
+  "page": {
+   "L0 today (as observed)": 0.9990796134376438,
+   "L1 + HTTPS (free certificate)": 0.9990796134376438,
+   "L2 + trust badges (title, favicon, description, copyright, social)": 0.8814618806565424,
+   "L3 full page clone (title still mismatched)": 0.003988341770210155,
+   "L4 full page clone + matching title": 0.0008436876821598404
+  },
+  "combined": {
+   "L0 today (as observed)": 0.9998849516797055,
+   "L1 + HTTPS (free certificate)": 0.9998849516797055,
+   "L2 + trust badges (title, favicon, description, copyright, social)": 0.9996165055990183,
+   "L3 full page clone (title still mismatched)": 0.5534974689369535,
+   "L4 full page clone + matching title": 0.527458199110293
+  },
+  "either": {
+   "L0 today (as observed)": 0.9999233011198037,
+   "L1 + HTTPS (free certificate)": 0.9999233011198037,
+   "L2 + trust badges (title, favicon, description, copyright, social)": 0.9995781561589201,
+   "L3 full page clone (title still mismatched)": 0.982435956435036,
+   "L4 full page clone + matching title": 0.9823976069949378
+  }
+ },
+ "stress_login": {
+  "url": {
+   "L0 today (as observed)": 0.9991969484039349,
+   "L1 + HTTPS (free certificate)": 0.9965870307167235,
+   "L2 + trust badges (title, favicon, description, copyright, social)": 0.9965870307167235,
+   "L3 full page clone (title still mismatched)": 0.9965870307167235,
+   "L4 full page clone + matching title": 0.9965870307167235
+  },
+  "page": {
+   "L0 today (as observed)": 0.9927725356354146,
+   "L1 + HTTPS (free certificate)": 0.9927725356354146,
+   "L2 + trust badges (title, favicon, description, copyright, social)": 0.8779361573981128,
+   "L3 full page clone (title still mismatched)": 0.00903433045573178,
+   "L4 full page clone + matching title": 0.001003814495081309
+  },
+  "combined": {
+   "L0 today (as observed)": 1.0,
+   "L1 + HTTPS (free certificate)": 0.9987954226059025,
+   "L2 + trust badges (title, favicon, description, copyright, social)": 0.9973900823127886,
+   "L3 full page clone (title still mismatched)": 0.9024292310780968,
+   "L4 full page clone + matching title": 0.8913872716322023
+  },
+  "either": {
+   "L0 today (as observed)": 1.0,
+   "L1 + HTTPS (free certificate)": 0.9987954226059025,
+   "L2 + trust badges (title, favicon, description, copyright, social)": 0.9983938968078699,
+   "L3 full page clone (title still mismatched)": 0.9955832162216423,
+   "L4 full page clone + matching title": 0.9955832162216423
+  }
+ },
+ "slices": {
+  "url": {
+   "all phishing": {
+    "n": 92300,
+    "recall": 0.9952654387865656,
+    "auc": 0.9988813622844617,
+    "missed": 437
+   },
+   "look-alike URL (https, no path)": {
+    "n": 26076,
+    "recall": 0.9835480901978831,
+    "auc": 0.9960479112524614,
+    "missed": 429
+   },
+   "login page (password field)": {
+    "n": 4981,
+    "recall": 0.9991969484039349,
+    "auc": 0.9999709654206532,
+    "missed": 4
+   },
+   "polished page (>=3 of 5 trust markers)": {
+    "n": 982,
+    "recall": 0.9887983706720977,
+    "auc": 0.9990567739040368,
+    "missed": 11
+   },
+   "passes allow-list (USI=100)": {
+    "n": 713,
+    "recall": 0.9803646563814866,
+    "auc": 0.9911368160165929,
+    "missed": 14
+   }
+  },
+  "page": {
+   "all phishing": {
+    "n": 92300,
+    "recall": 0.9972372697724811,
+    "auc": 0.9999640054555877,
+    "missed": 255
+   },
+   "look-alike URL (https, no path)": {
+    "n": 26076,
+    "recall": 0.9990796134376438,
+    "auc": 0.999991059405402,
+    "missed": 24
+   },
+   "login page (password field)": {
+    "n": 4981,
+    "recall": 0.9927725356354146,
+    "auc": 0.9999052360750682,
+    "missed": 36
+   },
+   "polished page (>=3 of 5 trust markers)": {
+    "n": 982,
+    "recall": 0.9185336048879837,
+    "auc": 0.9987902657569437,
+    "missed": 80
+   },
+   "passes allow-list (USI=100)": {
+    "n": 713,
+    "recall": 0.9957924263674615,
+    "auc": 0.9998286125114684,
+    "missed": 3
+   }
+  },
+  "combined": {
+   "all phishing": {
+    "n": 92300,
+    "recall": 0.999967497291441,
+    "auc": 0.9999999089360933,
+    "missed": 3
+   },
+   "look-alike URL (https, no path)": {
+    "n": 26076,
+    "recall": 0.9998849516797055,
+    "auc": 0.9999996866708364,
+    "missed": 3
+   },
+   "login page (password field)": {
+    "n": 4981,
+    "recall": 1.0,
+    "auc": 0.999999975614855,
+    "missed": 0
+   },
+   "polished page (>=3 of 5 trust markers)": {
+    "n": 982,
+    "recall": 0.9979633401221996,
+    "auc": 0.999994664889506,
+    "missed": 2
+   },
+   "passes allow-list (USI=100)": {
+    "n": 713,
+    "recall": 1.0,
+    "auc": 1.0,
+    "missed": 0
+   }
+  }
+ },
+ "polished": {
+  "n": 982,
+  "share_of_phish": 0.010639219934994584,
+  "page_missed": 80,
+  "page_miss_rate": 0.0814663951120163,
+  "other_miss_rate": 0.0019163801222102982,
+  "ratio": 42.51056153622345
+ },
+ "shap_share": {
+  "PAGE": 0.694051683747936,
+  "URL": 0.305948316252064
+ },
+ "shap_top": [
+  {
+   "feature": "LineOfCode",
+   "mean_abs_shap": 3.2187277164868697,
+   "tier": "PAGE",
+   "share": 0.20249025764844167,
+   "corr_value_shap": -0.23976105172236808
+  },
+  {
+   "feature": "NoOfSelfRef",
+   "mean_abs_shap": 2.5935968686695237,
+   "tier": "PAGE",
+   "share": 0.16316325717240138,
+   "corr_value_shap": -0.4365855430089988
+  },
+  {
+   "feature": "NoOfExternalRef",
+   "mean_abs_shap": 1.709696367649372,
+   "tier": "PAGE",
+   "share": 0.10755705001471455,
+   "corr_value_shap": -0.33912548802627324
+  },
+  {
+   "feature": "IsHTTPS",
+   "mean_abs_shap": 1.6467578603050776,
+   "tier": "URL",
+   "share": 0.10359758662087873,
+   "corr_value_shap": -0.9787136881424674
+  },
+  {
+   "feature": "NoOfImage",
+   "mean_abs_shap": 0.9254513797394466,
+   "tier": "PAGE",
+   "share": 0.0582201741901553,
+   "corr_value_shap": -0.35262571476853255
+  },
+  {
+   "feature": "LetterRatioInURL",
+   "mean_abs_shap": 0.6919087760921492,
+   "tier": "URL",
+   "share": 0.04352800195632477,
+   "corr_value_shap": 0.8476857588999132
+  },
+  {
+   "feature": "NoOfOtherSpecialCharsInURL",
+   "mean_abs_shap": 0.6109113271403592,
+   "tier": "URL",
+   "share": 0.038432450001710916,
+   "corr_value_shap": 0.687744442669026
+  },
+  {
+   "feature": "LargestLineLength",
+   "mean_abs_shap": 0.5142692795981665,
+   "tier": "PAGE",
+   "share": 0.032352695878286486,
+   "corr_value_shap": 0.17064790966377769
+  },
+  {
+   "feature": "HasSocialNet",
+   "mean_abs_shap": 0.4700496642189558,
+   "tier": "PAGE",
+   "share": 0.029570838542113793,
+   "corr_value_shap": -0.9699887094891374
+  },
+  {
+   "feature": "HasDescription",
+   "mean_abs_shap": 0.45239330002544675,
+   "tier": "PAGE",
+   "share": 0.02846007613858231,
+   "corr_value_shap": -0.9399732602178448
+  },
+  {
+   "feature": "NoOfDegitsInURL",
+   "mean_abs_shap": 0.37310411250099323,
+   "tier": "URL",
+   "share": 0.02347199096184484,
+   "corr_value_shap": 0.4562841978790779
+  },
+  {
+   "feature": "NoOfSubDomain",
+   "mean_abs_shap": 0.3614050784864514,
+   "tier": "URL",
+   "share": 0.022736004379410937,
+   "corr_value_shap": -0.6024213554345776
+  },
+  {
+   "feature": "NoOfJS",
+   "mean_abs_shap": 0.35466339722524,
+   "tier": "PAGE",
+   "share": 0.022311885008091028,
+   "corr_value_shap": -0.5513251035844989
+  },
+  {
+   "feature": "SpacialCharRatioInURL",
+   "mean_abs_shap": 0.2897976047693435,
+   "tier": "URL",
+   "share": 0.018231176049800863,
+   "corr_value_shap": 0.9023316936188777
+  },
+  {
+   "feature": "HasCopyrightInfo",
+   "mean_abs_shap": 0.21254758221680728,
+   "tier": "PAGE",
+   "share": 0.013371374802901945,
+   "corr_value_shap": -0.8826624602331912
+  }
+ ],
+ "login": {
+  "n": 22073,
+  "phish": 4981,
+  "legit": 17092,
+  "title_match_legit": 79.42407756125672,
+  "title_match_phish": 5.147827140534029
+ },
+ "tld": {
+  "groups": 25,
+  "recall": 0.28169014084507044,
+  "precision": 0.9720352923583072,
+  "legit_hit": 748
+ },
+ "layered_stress": {
+  "L0 today (as observed)": {
+   "layer1": 0.9937378114842904,
+   "layers13": 0.9999566630552547,
+   "single_best": 0.999967497291441,
+   "single_best_at_half": 0.9999024918743229,
+   "url_at_001": 0.9952654387865656
+  },
+  "L1 + HTTPS (free certificate)": {
+   "layer1": 0.6981581798483207,
+   "layers13": 0.9959479956663055,
+   "single_best": 0.9981798483206934,
+   "single_best_at_half": 0.9952871072589382,
+   "url_at_001": 0.8401300108342362
+  },
+  "L2 + trust badges (title, favicon, description, copyright, social)": {
+   "layer1": 0.6981581798483207,
+   "layers13": 0.9921885157096425,
+   "single_best": 0.995124593716143,
+   "single_best_at_half": 0.9903683640303359,
+   "url_at_001": 0.8401300108342362
+  },
+  "L3 full page clone (title still mismatched)": {
+   "layer1": 0.6981581798483207,
+   "layers13": 0.6983531960996749,
+   "single_best": 0.4808125677139762,
+   "single_best_at_half": 0.3163271939328277,
+   "url_at_001": 0.8401300108342362
+  },
+  "L4 full page clone + matching title": {
+   "layer1": 0.6981581798483207,
+   "layers13": 0.6982773564463706,
+   "single_best": 0.46975081256771395,
+   "single_best_at_half": 0.29498374864572047,
+   "url_at_001": 0.8401300108342362
+  }
+ }
+}

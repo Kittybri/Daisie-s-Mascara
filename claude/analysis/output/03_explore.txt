@@ -1,0 +1,283 @@
+rows 215795 | phishing 92300 (42.7721%) | legit 123495
+Classification vs Phishing:
+ Phishing             0      1
+Classification               
+Legitimate      123495      0
+Phishing             0  92300
+
+=== single-feature AUC (phishing = positive) ===
+                   feature    auc    sep    direction  nunique  mean_legit  mean_phish  med_legit  med_phish
+        URLSimilarityIndex 0.0039 0.9961 higher=legit    34305    100.0000     49.6346   100.0000    51.4409
+                LineOfCode 0.0097 0.9903 higher=legit    10382  1,943.8148     65.7953 1,104.0000    12.0000
+           NoOfExternalRef 0.0119 0.9881 higher=legit     1157     85.1777      1.1234    46.0000     0.0000
+                 NoOfImage 0.0204 0.9796 higher=legit      960     44.8498      0.8659    25.0000     0.0000
+               NoOfSelfRef 0.0275 0.9725 higher=legit     1327    113.1954      0.4976    76.0000     0.0000
+                    NoOfJS 0.0291 0.9709 higher=legit      246     17.7361      0.8909    14.0000     0.0000
+                   NoOfCSS 0.0424 0.9576 higher=legit      206     10.7554      0.4404     6.0000     0.0000
+              HasSocialNet 0.1050 0.8950 higher=legit        2      0.7950      0.0050     1.0000     0.0000
+          HasCopyrightInfo 0.1246 0.8754 higher=legit        2      0.8080      0.0572     1.0000     0.0000
+            HasDescription 0.1541 0.8459 higher=legit        2      0.7361      0.0442     1.0000     0.0000
+NoOfOtherSpecialCharsInURL 0.8236 0.8236 higher=phish       72      1.2451      3.8023     1.0000     3.0000
+         LargestLineLength 0.1833 0.8167 higher=legit    25193  7,375.0555 20,320.3336 3,069.0000   137.0000
+     SpacialCharRatioInURL 0.8078 0.8078 higher=phish      238      0.0484      0.0833     0.0420     0.0800
+     DomainTitleMatchScore 0.2079 0.7921 higher=legit      151     75.2716     16.5798   100.0000     0.0000
+           HasSubmitButton 0.2117 0.7883 higher=legit        2      0.6615      0.0848     1.0000     0.0000
+        URLTitleMatchScore 0.2294 0.7706 higher=legit      480     75.2716     21.2167   100.0000     0.0000
+              IsResponsive 0.2312 0.7688 higher=legit        2      0.8544      0.3168     1.0000     0.0000
+               URLCharProb 0.2323 0.7677 higher=legit   208746      0.0601      0.0500     0.0606     0.0520
+                NoOfiFrame 0.2450 0.7550 higher=legit      113      2.7087      0.0848     1.0000     0.0000
+                   IsHTTPS 0.2462 0.7538 higher=legit        2      1.0000      0.4923     1.0000     0.0000
+           HasHiddenFields 0.2513 0.7487 higher=legit        2      0.5910      0.0936     1.0000     0.0000
+              NoOfEmptyRef 0.2545 0.7455 higher=legit      289      4.0755      0.1493     1.0000     0.0000
+      CharContinuationRate 0.2565 0.7435 higher=legit      888      0.9331      0.7287     1.0000     0.7273
+          NoOfLettersInURL 0.7419 0.7419 higher=phish      413     12.9376     28.0437    13.0000    20.0000
+                HasFavicon 0.2605 0.7395 higher=legit        2      0.5667      0.0876     1.0000     0.0000
+                 URLLength 0.7318 0.7318 higher=phish      473     26.2343     45.6415    26.0000    34.0000
+           NoOfDegitsInURL 0.7276 0.7276 higher=phish      174      0.0515      4.3111     0.0000     0.0000
+           DegitRatioInURL 0.7257 0.7257 higher=phish      569      0.0022      0.0639     0.0000     0.0000
+          LetterRatioInURL 0.7149 0.7149 higher=phish      703      0.4768      0.5683     0.4800     0.5770
+                    Robots 0.3247 0.6753 higher=legit        2      0.4166      0.0660     0.0000     0.0000
+                  HasTitle 0.3393 0.6607 higher=legit        2      0.9988      0.6774     1.0000     1.0000
+                       Pay 0.3454 0.6546 higher=legit        2      0.3691      0.0600     0.0000     0.0000
+              DomainLength 0.6238 0.6238 higher=phish      101     19.2343     24.4600    19.0000    22.0000
+         TLDLegitimateProb 0.3910 0.6090 higher=legit      461      0.2817      0.2320     0.5229     0.0180
+                      Bank 0.4367 0.5633 higher=legit        2      0.1811      0.0546     0.0000     0.0000
+                 NoOfPopup 0.4545 0.5455 higher=legit      111      0.3861      0.0099     0.0000     0.0000
+          HasPasswordField 0.4578 0.5422 higher=legit        2      0.1384      0.0540     0.0000     0.0000
+     HasExternalFormSubmit 0.4653 0.5347 higher=legit        2      0.0737      0.0043     0.0000     0.0000
+            NoOfQMarkInURL 0.5304 0.5304 higher=phish        5      0.0000      0.0687     0.0000     0.0000
+           NoOfEqualsInURL 0.5268 0.5268 higher=phish       25      0.0000      0.1458     0.0000     0.0000
+                 TLDLength 0.5260 0.5260 higher=phish       12      2.7237      2.8192     3.0000     3.0000
+           NoOfURLRedirect 0.5162 0.5162 higher=phish        2      0.1194      0.1517     0.0000     0.0000
+          NoOfSelfRedirect 0.5156 0.5156 higher=phish        2      0.0268      0.0580     0.0000     0.0000
+                    Crypto 0.4848 0.5152 higher=legit        2      0.0365      0.0061     0.0000     0.0000
+             NoOfSubDomain 0.4852 0.5148 higher=legit       10      1.1619      1.1689     1.0000     1.0000
+        NoOfAmpersandInURL 0.5044 0.5044 higher=phish       30      0.0000      0.0585     0.0000     0.0000
+                IsDomainIP 0.5031 0.5031 higher=phish        2      0.0000      0.0062     0.0000     0.0000
+        NoOfObfuscatedChar 0.5024 0.5024 higher=phish       19      0.0000      0.0588     0.0000     0.0000
+          ObfuscationRatio 0.5024 0.5024 higher=phish      140      0.0000      0.0003     0.0000     0.0000
+            HasObfuscation 0.5024 0.5024 higher=phish        2      0.0000      0.0048     0.0000     0.0000
+
+=== binary flags ===
+                 flag  pct_legit_with  pct_phish_with  phish_rate_if_1  phish_rate_if_0    n_1
+           IsDomainIP          0.0000          0.0062           1.0000           0.4262    574
+       HasObfuscation          0.0000          0.0048           1.0000           0.4265    444
+              IsHTTPS          1.0000          0.4923           0.2690           1.0000 168938
+             HasTitle          0.9988          0.6774           0.3364           0.9949 185864
+           HasFavicon          0.5667          0.0876           0.1036           0.6115  78076
+               Robots          0.4166          0.0660           0.1059           0.5448  57541
+         IsResponsive          0.8544          0.3168           0.2170           0.7781 134753
+      NoOfURLRedirect          0.1194          0.1517           0.4872           0.4186  28749
+     NoOfSelfRedirect          0.0268          0.0580           0.6175           0.4198   8662
+       HasDescription          0.7361          0.0442           0.0430           0.7302  94982
+HasExternalFormSubmit          0.0737          0.0043           0.0421           0.4455   9496
+         HasSocialNet          0.7950          0.0050           0.0047           0.7839  98637
+      HasSubmitButton          0.6615          0.0848           0.0874           0.6689  89513
+      HasHiddenFields          0.5910          0.0936           0.1058           0.6236  81622
+     HasPasswordField          0.1384          0.0540           0.2257           0.4507  22073
+                 Bank          0.1811          0.0546           0.1838           0.4632  27403
+                  Pay          0.3691          0.0600           0.1083           0.5269  51124
+               Crypto          0.0365          0.0061           0.1112           0.4353   5072
+     HasCopyrightInfo          0.8080          0.0572           0.0503           0.7858 105064
+
+=== URLSimilarityIndex == 100 vs label ===
+Phishing                 0      1     All
+URLSimilarityIndex                       
+False                    0  91587   91587
+True                123495    713  124208
+All                 123495  92300  215795
+USI describe by class:
+                 count     mean     std      min      25%      50%      75%      max
+Phishing                                                                           
+0        123,495.0000 100.0000  0.0000 100.0000 100.0000 100.0000 100.0000 100.0000
+1         92,300.0000  49.6346 22.5800   0.1556  32.1067  51.4409  67.3077 100.0000
+USI max among phishing: 100.0 | min among legit: 100.0
+n phishing with USI==100: 713 | n legit with USI<100: 0
+
+IsHTTPS vs label:
+ Phishing       0      1
+IsHTTPS                
+0.0000         0  46857
+1.0000    123495  45443
+
+HasTitle vs label:
+ Phishing       0      1
+HasTitle               
+0.0000       153  29778
+1.0000    123342  62522
+
+IsDomainIP vs label:
+ Phishing         0      1
+IsDomainIP               
+0.0000      123495  91726
+1.0000           0    574
+
+HasObfuscation vs label:
+ Phishing             0      1
+HasObfuscation               
+0.0000          123495  91856
+1.0000               0    444
+
+NoOfURLRedirect vs label:
+ Phishing              0      1
+NoOfURLRedirect               
+0.0000           108752  78294
+1.0000            14743  14006
+
+NoOfSelfRedirect vs label:
+ Phishing               0      1
+NoOfSelfRedirect               
+0.0000            120182  86951
+1.0000              3313   5349
+
+=== URL structure parsed from URL_Anonymized ===
+scheme x label:
+ Phishing       0      1
+scheme                 
+http           0  47304
+https     123495  44996
+Phishing             0       1
+has_path        0.0000  0.2842
+path_len        0.0000 13.6126
+path_depth      0.0000  0.7036
+has_query       0.0000  0.0609
+host_dots       2.1619  2.1690
+host_hyphens    0.0833  0.5478
+host_digits     0.0515  1.9914
+host_len       19.2343 24.4613
+trailing_slash  0.0000  0.3643
+url_len_str    27.2343 46.1598
+has_at          0.0000  0.0149
+has_port        0.0000  0.0003
+len(URL string) == URLLength ?  0.20619569498829907 | diff describe:
+ count   215,795.0000
+mean          0.7940
+std           0.4113
+min           0.0000
+25%           1.0000
+50%           1.0000
+75%           1.0000
+max          35.0000
+dtype: float64
+host == Domain_Anonymized length match: 0.9999675618063439
+has_path x label:
+ Phishing       0      1
+has_path               
+0         123495  66071
+1              0  26229
+path_len (non-empty) by class:
+                count    mean      std    min     25%     50%     75%        max
+Phishing                                                                       
+1        26,229.0000 47.9028 100.5597 1.0000 11.0000 25.0000 57.0000 5,744.0000
+sample legit URLs: ['https://ezo.tueiwcd.tnk', 'https://iml.aewcpselsqflz.ita', 'https://qtd.kotwvfuvlld-tlifllo.wgo', 'https://lkp.uaxbilrpo.nxq', 'https://pyc.hvhzpqgwhob.tb.rf', 'https://uok.eppd.raz', 'https://pal.lhf.nd.jf', 'https://yhb.imqnjwj.dfx']
+sample phish URLs: ['http://iee.qdkoisig.gp', 'https://vnfbdqh.zglcie.kgaxu/iuui/uoaninuflnjb2z8ildiu5vsfjvhkgijlbu3ujber4yqkgcvndalrrjjsode//hvnefmatprnc_dgqpjj804429.nqkh', 'https://zeepvwjigbwboykp.fjdiauredhy.ify/', 'https://tpdris-qw.esw.hjz/', 'http://miv.tymdnvyzsnatdnah.ocf', 'http://prx.iaoms-ajs.ibr', 'http://umsejrbyjlfnlmhf.fj/srqtgithuqcbh/ku.pxm', 'http://qyz.vxylvg.zr.rvua.sp']
+sample legit URLs WITH path: []
+
+=== ID structure ===
+rows sharing a URL_ID: 710 | distinct dup URL_IDs: 355
+label-inconsistent dup URL_IDs: 0
+dup rows by label:
+ Phishing
+1.0000    710
+Name: count, dtype: int64
+domains: 201833 | domains with >1 URL: 4832 | rows in those: 18794
+mixed-label domains: 43
+rows-per-domain by class of domain:
+              count   mean    std    min    25%    50%    75%        max
+cls                                                                    
+legit 123,452.0000 1.0000 0.0000 1.0000 1.0000 1.0000 1.0000     1.0000
+phish  78,381.0000 1.1781 5.3083 1.0000 1.0000 1.0000 1.0000 1,093.0000
+top multi-URL domains:
+                   n  phish
+Domain_ID                 
+domain_000119  1093 1.0000
+domain_000038   468 1.0000
+domain_000052   348 1.0000
+domain_000788   335 1.0000
+domain_000539   293 1.0000
+domain_000647   258 1.0000
+domain_000387   225 1.0000
+domain_001579   207 1.0000
+domain_000190   174 1.0000
+domain_000344   170 1.0000
+domain_001020   167 1.0000
+domain_000611   158 1.0000
+domain_001989   153 1.0000
+domain_002379   152 1.0000
+domain_001324   135 1.0000
+share of rows whose domain has >1 URL, by class:
+ Phishing
+0   0.0003
+1   0.2032
+Name: Domain_ID, dtype: float64
+
+titles: 181440 | titles used >1x: 3738 | rows in those: 38093
+top reused titles:
+                   n  phish   ndom  hastitle
+Title_ID                                   
+title_000012  29937 0.9947  26220    0.0002
+title_026965     19 0.2632     18    1.0000
+title_010578     11 1.0000     11    1.0000
+title_041596      9 0.0000      9    1.0000
+title_016099      9 1.0000      9    1.0000
+title_040454      9 0.2222      9    1.0000
+title_013110      7 1.0000      7    1.0000
+title_058913      6 0.5000      6    1.0000
+title_016407      6 0.8333      6    1.0000
+title_066553      6 0.8333      6    1.0000
+title_046752      6 1.0000      6    1.0000
+title_076413      6 0.0000      6    1.0000
+title_016022      6 0.0000      6    1.0000
+title_032427      6 0.1667      6    1.0000
+title_009549      6 1.0000      6    1.0000
+title_013490      6 1.0000      6    1.0000
+title_063443      6 1.0000      6    1.0000
+title_001043      6 0.1667      6    1.0000
+title_036144      6 1.0000      6    1.0000
+title_004277      6 0.0000      6    1.0000
+title_009657      5 1.0000      4    1.0000
+title_049884      5 1.0000      5    1.0000
+title_040596      5 1.0000      5    1.0000
+title_036460      5 0.2000      5    1.0000
+title_044791      5 0.0000      5    1.0000
+title shared by >= 1 domains (HasTitle=1): n=185864, phish rate=0.3364
+title shared by >= 2 domains (HasTitle=1): n=5133, phish rate=0.4615
+title shared by >= 5 domains (HasTitle=1): n=298, phish rate=0.5302
+title shared by >= 10 domains (HasTitle=1): n=36, phish rate=0.4722
+title shared by >= 50 domains (HasTitle=1): n=6, phish rate=0.1667
+share of rows with title reused across >=2 domains, by class (HasTitle=1 only):
+ Phishing
+0   0.0224
+1   0.0257
+dtype: float64
+
+TLD groups: 680 | nunique TLDLegitimateProb per group max: 1
+top TLD groups by volume:
+                     n  phish  tldprob  tldlen  nprob
+TLD_Group                                           
+tld_group_003  103012 0.3883   0.5229  3.0000      1
+tld_group_014   17289 0.1204   0.0800  3.0000      1
+tld_group_019    6467 0.4378   0.0384  3.0000      1
+tld_group_012    5940 0.9778   0.0015  3.0000      1
+tld_group_006    5858 0.0498   0.0286  2.0000      1
+tld_group_007    4966 0.9156   0.0060  2.0000      1
+tld_group_041    3848 0.8958   0.0129  2.0000      1
+tld_group_008    3676 0.1736   0.0327  2.0000      1
+tld_group_009    3540 0.7737   0.0180  2.0000      1
+tld_group_010    2719 0.1269   0.0101  2.0000      1
+tld_group_050    2138 0.9991   0.0003  3.0000      1
+tld_group_072    2138 0.9874   0.0010  3.0000      1
+tld_group_018    2031 0.0625   0.0230  2.0000      1
+tld_group_002    1737 0.1151   0.0122  2.0000      1
+tld_group_040    1707 0.0029   0.0115  3.0000      1
+tld_group_031    1694 0.2645   0.0141  2.0000      1
+tld_group_061    1691 0.3536   0.0094  2.0000      1
+tld_group_035    1582 0.1125   0.0082  2.0000      1
+tld_group_016    1489 0.0685   0.0102  2.0000      1
+tld_group_026    1438 0.5716   0.0075  4.0000      1
+tld_group_028    1357 0.9963   0.0018  4.0000      1
+tld_group_070    1345 0.9844   0.0017  3.0000      1
+tld_group_032    1332 0.9940   0.0003  4.0000      1
+tld_group_044    1259 0.3852   0.0051  2.0000      1
+tld_group_066    1212 0.5974   0.0070  2.0000      1
+TLD groups with n>=100: 96 | of which >=90% phishing: 25 covering rows: 26748 | <=10% phishing: 14

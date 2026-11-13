@@ -1,0 +1,7 @@
+thresholds: layer-1 URL block > 0.8448 | layer-3 URL+page >= 0.5 | single best model >= 0.0064 (<=0.1% false alarms)
+legit flagged by layers 1+3 today: 18 of 123495
+L0 today (as observed)                                               layer 1 alone 99.37% | layers 1+3 100.00% | single best model 100.00% (at 0.5: 99.99%) | URL-only model at <=0.1% FA 99.53%
+L1 + HTTPS (free certificate)                                        layer 1 alone 69.82% | layers 1+3 99.59% | single best model 99.82% (at 0.5: 99.53%) | URL-only model at <=0.1% FA 84.01%
+L2 + trust badges (title, favicon, description, copyright, social)   layer 1 alone 69.82% | layers 1+3 99.22% | single best model 99.51% (at 0.5: 99.04%) | URL-only model at <=0.1% FA 84.01%
+L3 full page clone (title still mismatched)                          layer 1 alone 69.82% | layers 1+3 69.84% | single best model 48.08% (at 0.5: 31.63%) | URL-only model at <=0.1% FA 84.01%
+L4 full page clone + matching title                                  layer 1 alone 69.82% | layers 1+3 69.83% | single best model 46.98% (at 0.5: 29.50%) | URL-only model at <=0.1% FA 84.01%

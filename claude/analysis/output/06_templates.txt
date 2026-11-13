@@ -1,0 +1,44 @@
+distinct fingerprints: 138424 | used by >=2 domains: 4579 | mixed-label fingerprints: 2
+page fingerprint shared by >=    2 different domains: phishing 86.561% | legit 0.1563% | rows 80089 | phishing share of those rows 99.7590%
+page fingerprint shared by >=    5 different domains: phishing 77.247% | legit 0.0057% | rows 71306 | phishing share of those rows 99.9902%
+page fingerprint shared by >=   10 different domains: phishing 71.698% | legit 0.0016% | rows 66179 | phishing share of those rows 99.9970%
+page fingerprint shared by >=   50 different domains: phishing 53.574% | legit 0.0000% | rows 49449 | phishing share of those rows 100.0000%
+page fingerprint shared by >=  100 different domains: phishing 47.229% | legit 0.0000% | rows 43592 | phishing share of those rows 100.0000%
+page fingerprint shared by >= 1000 different domains: phishing 19.249% | legit 0.0000% | rows 17767 | phishing share of those rows 100.0000%
+
+Top 20 fingerprints by number of domains:
+                         n  phish  ndom  ntld      loc        lll  title    img     js    ext     pw
+fp                                                                                                  
+191201745050907818    5592 1.0000  5554     2 108.0000 8,125.0000 1.0000 0.0000 0.0000 3.0000 0.0000
+13614538745936908106  2678 1.0000  2530     3 198.0000   869.0000 1.0000 0.0000 0.0000 2.0000 0.0000
+17690575323026779420  2286 1.0000  2237   174   9.0000    50.0000 1.0000 0.0000 0.0000 0.0000 0.0000
+9162633018023247136   1379 1.0000  1365     4  68.0000    80.0000 1.0000 0.0000 0.0000 1.0000 0.0000
+6624565825896528573   1333 1.0000  1333    67   2.0000 2,826.0000 1.0000 0.0000 1.0000 1.0000 0.0000
+3673021336740268483   1363 1.0000  1251   118  15.0000   155.0000 1.0000 0.0000 0.0000 0.0000 0.0000
+11589878790615201097  1042 1.0000  1039    17   8.0000    41.0000 1.0000 0.0000 0.0000 0.0000 0.0000
+6294409113961322019   1048 1.0000  1035    88   2.0000    32.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+5340767692719023740   1046 1.0000  1032    87   2.0000    34.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+16351688880579144179   998 1.0000   989    85   2.0000    33.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+3725832924193164164    978 1.0000   932   101   2.0000    31.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+16961814954588397625   881 1.0000   881    12   9.0000    44.0000 1.0000 0.0000 0.0000 0.0000 0.0000
+5441086877083543276    862 1.0000   856    73   2.0000    37.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+14495552173291854556   825 1.0000   820    84   2.0000    35.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+7725015719326348537    792 1.0000   791    84   2.0000    36.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+16023730934235089649   762 1.0000   754    93   2.0000    30.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+17541705245670219865   612 1.0000   610    69   2.0000    39.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+12371115464318583234   571 1.0000   569    59   2.0000    38.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+15991726548391911848   636 1.0000   551     1 141.0000   161.0000 1.0000 4.0000 0.0000 3.0000 0.0000
+9883167982532587157    550 1.0000   550    17   8.0000    49.0000 1.0000 0.0000 0.0000 0.0000 0.0000
+top    1 all-phishing fingerprints cover 6.059% of all phishing rows
+top    5 all-phishing fingerprints cover 14.407% of all phishing rows
+top   10 all-phishing fingerprints cover 20.330% of all phishing rows
+top   20 all-phishing fingerprints cover 28.516% of all phishing rows
+top   50 all-phishing fingerprints cover 40.651% of all phishing rows
+top  100 all-phishing fingerprints cover 48.767% of all phishing rows
+top  500 all-phishing fingerprints cover 67.109% of all phishing rows
+stub pages (<=20 lines): phishing rows 57003 (61.758% of phishing) | of these, fingerprint shared by >=5 domains: 83.369% | legit rows in such shared fingerprints: 0
+substantive pages (>20 lines): phishing rows 35297 (38.242% of phishing) | of these, fingerprint shared by >=5 domains: 67.360% | legit rows in such shared fingerprints: 7
+
+=== template block-list, 5-fold grouped by domain ===
+flag a page if its exact structure was already seen on >=3 other phishing domains (and never on a legit one): catches 72085 = 78.099% of phishing, false alarms 2 of 123495 legit
+  of which substantive (>20 lines): 24087 phishing, 2 legit

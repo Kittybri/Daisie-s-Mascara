@@ -1,0 +1,202 @@
+rows=215795 phishing=92300 legit=123495 | URL feats=21 PAGE feats=28
+slice 'all phishing': n_phishing=92300
+slice 'look-alike URL (https, no path)': n_phishing=26076
+slice 'login page (password field)': n_phishing=4981
+slice 'polished page (>=3 of 5 trust markers)': n_phishing=982
+slice 'passes allow-list (USI=100)': n_phishing=713
+fold sizes: [43159, 43159, 43159, 43159, 43159] | phishing share per fold: [0.4277, 0.4277, 0.4277, 0.4277, 0.4277]
+GBM [url] grouped-CV               AUC=0.99888 PR-AUC=0.99910 | @0.5: acc=99.7549% recall=99.4648% precision=99.9619% FP=35 FN=494 | recall@0.1%FPR=99.5265% recall@1%FPR=99.6522%
+GBM [page] grouped-CV              AUC=0.99996 PR-AUC=0.99995 | @0.5: acc=99.8239% recall=99.7421% precision=99.8460% FP=142 FN=238 | recall@0.1%FPR=99.7237% recall@1%FPR=99.9393%
+GBM [combined] grouped-CV          AUC=1.00000 PR-AUC=1.00000 | @0.5: acc=99.9935% recall=99.9902% precision=99.9946% FP=5 FN=9 | recall@0.1%FPR=99.9967% recall@1%FPR=100.0000%
+GBM [combined_plus_usi] grouped-CV AUC=1.00000 PR-AUC=1.00000 | @0.5: acc=99.9991% recall=99.9978% precision=100.0000% FP=0 FN=2 | recall@0.1%FPR=100.0000% recall@1%FPR=100.0000%
+  (78s)
+GBM [combined] RANDOM-CV           AUC=1.00000 PR-AUC=1.00000 | @0.5: acc=99.9949% recall=99.9902% precision=99.9978% FP=2 FN=9 | recall@0.1%FPR=99.9967% recall@1%FPR=100.0000%
+GBM [url] RANDOM-CV                AUC=0.99886 PR-AUC=0.99908 | @0.5: acc=99.7590% recall=99.4767% precision=99.9597% FP=37 FN=483 | recall@0.1%FPR=99.5341% recall@1%FPR=99.6468%
+Logistic [url] grouped-CV          AUC=0.99855 PR-AUC=0.99885 | @0.5: acc=99.6599% recall=99.2297% precision=99.9749% FP=23 FN=711 | recall@0.1%FPR=99.3131% recall@1%FPR=99.5146%
+Logistic [page] grouped-CV         AUC=0.99987 PR-AUC=0.99984 | @0.5: acc=99.6209% recall=99.5666% precision=99.5472% FP=418 FN=400 | recall@0.1%FPR=98.8472% recall@1%FPR=99.7822%
+Logistic [combined] grouped-CV     AUC=0.99999 PR-AUC=0.99999 | @0.5: acc=99.9829% recall=99.9707% precision=99.9892% FP=10 FN=27 | recall@0.1%FPR=99.9913% recall@1%FPR=99.9967%
+DecisionTree depth2 [combined]     AUC=0.98501 PR-AUC=0.97334 | @0.5: acc=98.2057% recall=98.1993% precision=97.6198% FP=2210 FN=1662 | recall@0.1%FPR=0.0000% recall@1%FPR=58.0466%
+DecisionTree depth3 [combined]     AUC=0.99094 PR-AUC=0.98286 | @0.5: acc=98.8985% recall=98.9047% precision=98.5257% FP=1366 FN=1011 | recall@0.1%FPR=0.7996% recall@1%FPR=77.9848%
+DecisionTree depth4 [combined]     AUC=0.99448 PR-AUC=0.99044 | @0.5: acc=99.0686% recall=99.2752% precision=98.5576% FP=1341 FN=669 | recall@0.1%FPR=19.8072% recall@1%FPR=98.6425%
+
+Depth-3 tree on PAGE features (fit on all rows, for display):
+|--- NoOfExternalRef <= 4.5
+|   |--- NoOfSelfRef <= 4.5
+|   |   |--- HasSocialNet <= 0.5
+|   |   |   |--- class: 1
+|   |   |--- HasSocialNet >  0.5
+|   |   |   |--- class: 0
+|   |--- NoOfSelfRef >  4.5
+|   |   |--- LineOfCode <= 100.5
+|   |   |   |--- class: 1
+|   |   |--- LineOfCode >  100.5
+|   |   |   |--- class: 0
+|--- NoOfExternalRef >  4.5
+|   |--- LineOfCode <= 125.5
+|   |   |--- DomainTitleMatchScore <= 37.4
+|   |   |   |--- class: 1
+|   |   |--- DomainTitleMatchScore >  37.4
+|   |   |   |--- class: 0
+|   |--- LineOfCode >  125.5
+|   |   |--- NoOfSelfRef <= 0.5
+|   |   |   |--- class: 0
+|   |   |--- NoOfSelfRef >  0.5
+|   |   |   |--- class: 0
+
+DecisionTree depth3 [page]         AUC=0.99059 PR-AUC=0.98216 | @0.5: acc=98.3665% recall=97.6230% precision=98.5444% FP=1331 FN=2194 | recall@0.1%FPR=0.1723% recall@1%FPR=77.3575%
+scorecard5: flag if <= 0 markers -> recall=70.5016% precision=99.5167% acc=87.2365% FP=316 FN=27227
+scorecard5: flag if <= 1 markers -> recall=94.7421% precision=96.0091% acc=96.0666% FP=3635 FN=4853
+scorecard5: flag if <= 2 markers -> recall=98.9361% precision=84.1392% acc=91.5679% FP=17214 FN=982
+scorecard5: flag if <= 3 markers -> recall=99.9252% precision=65.2529% acc=77.2089% FP=49113 FN=69
+scorecard5: AUC=0.98859
+scorecard9: flag if <= 0 markers -> recall=52.0043% precision=99.9729% acc=79.4652% FP=13 FN=44300
+scorecard9: flag if <= 1 markers -> recall=75.7476% precision=99.5657% acc=89.4854% FP=305 FN=22385
+scorecard9: flag if <= 2 markers -> recall=87.9437% precision=97.4232% acc=93.8483% FP=2147 FN=11128
+scorecard9: flag if <= 3 markers -> recall=94.4485% precision=91.8987% acc=94.0643% FP=7685 FN=5124
+scorecard9: AUC=0.98687
+
+=== HARD SLICES: phishing subset vs ALL legit; threshold fixed at <=0.1% legit false-positive rate ===
+url              thr=0.2202 (FPR=0.0972%) | all phishing                             n= 92300 recall=99.5265% missed=   437 AUC=0.99888
+url              thr=0.2202 (FPR=0.0972%) | look-alike URL (https, no path)          n= 26076 recall=98.3548% missed=   429 AUC=0.99605
+url              thr=0.2202 (FPR=0.0972%) | login page (password field)              n=  4981 recall=99.9197% missed=     4 AUC=0.99997
+url              thr=0.2202 (FPR=0.0972%) | polished page (>=3 of 5 trust markers)   n=   982 recall=98.8798% missed=    11 AUC=0.99906
+url              thr=0.2202 (FPR=0.0972%) | passes allow-list (USI=100)              n=   713 recall=98.0365% missed=    14 AUC=0.99114
+page             thr=0.5547 (FPR=0.0988%) | all phishing                             n= 92300 recall=99.7237% missed=   255 AUC=0.99996
+page             thr=0.5547 (FPR=0.0988%) | look-alike URL (https, no path)          n= 26076 recall=99.9080% missed=    24 AUC=0.99999
+page             thr=0.5547 (FPR=0.0988%) | login page (password field)              n=  4981 recall=99.2773% missed=    36 AUC=0.99991
+page             thr=0.5547 (FPR=0.0988%) | polished page (>=3 of 5 trust markers)   n=   982 recall=91.8534% missed=    80 AUC=0.99879
+page             thr=0.5547 (FPR=0.0988%) | passes allow-list (USI=100)              n=   713 recall=99.5792% missed=     3 AUC=0.99983
+combined         thr=0.0064 (FPR=0.0737%) | all phishing                             n= 92300 recall=99.9967% missed=     3 AUC=1.00000
+combined         thr=0.0064 (FPR=0.0737%) | look-alike URL (https, no path)          n= 26076 recall=99.9885% missed=     3 AUC=1.00000
+combined         thr=0.0064 (FPR=0.0737%) | login page (password field)              n=  4981 recall=100.0000% missed=     0 AUC=1.00000
+combined         thr=0.0064 (FPR=0.0737%) | polished page (>=3 of 5 trust markers)   n=   982 recall=99.7963% missed=     2 AUC=0.99999
+combined         thr=0.0064 (FPR=0.0737%) | passes allow-list (USI=100)              n=   713 recall=100.0000% missed=     0 AUC=1.00000
+logit_combined   thr=0.1063 (FPR=0.0923%) | all phishing                             n= 92300 recall=99.9913% missed=     8 AUC=0.99999
+logit_combined   thr=0.1063 (FPR=0.0923%) | look-alike URL (https, no path)          n= 26076 recall=99.9693% missed=     8 AUC=0.99997
+logit_combined   thr=0.1063 (FPR=0.0923%) | login page (password field)              n=  4981 recall=100.0000% missed=     0 AUC=1.00000
+logit_combined   thr=0.1063 (FPR=0.0923%) | polished page (>=3 of 5 trust markers)   n=   982 recall=99.4908% missed=     5 AUC=0.99926
+logit_combined   thr=0.1063 (FPR=0.0923%) | passes allow-list (USI=100)              n=   713 recall=100.0000% missed=     0 AUC=1.00000
+scorecard5       thr=inf (FPR=0.0000%) | all phishing                             n= 92300 recall=0.0000% missed= 92300 AUC=0.98859
+scorecard5       thr=inf (FPR=0.0000%) | look-alike URL (https, no path)          n= 26076 recall=0.0000% missed= 26076 AUC=0.99096
+scorecard5       thr=inf (FPR=0.0000%) | login page (password field)              n=  4981 recall=0.0000% missed=  4981 AUC=0.97039
+scorecard5       thr=inf (FPR=0.0000%) | polished page (>=3 of 5 trust markers)   n=   982 recall=0.0000% missed=   982 AUC=0.70908
+scorecard5       thr=inf (FPR=0.0000%) | passes allow-list (USI=100)              n=   713 recall=0.0000% missed=   713 AUC=0.98275
+LOGIN PAGES ONLY [url] n=22073     AUC=0.99997 PR-AUC=0.99992 | @0.5: acc=99.9502% recall=99.8996% precision=99.8796% FP=6 FN=5 | recall@0.1%FPR=99.9398% recall@1%FPR=99.9598%
+LOGIN PAGES ONLY [page] n=22073    AUC=0.99991 PR-AUC=0.99973 | @0.5: acc=99.7418% recall=99.3776% precision=99.4775% FP=26 FN=31 | recall@0.1%FPR=98.9560% recall@1%FPR=99.8795%
+LOGIN PAGES ONLY [combined] n=22073 AUC=1.00000 PR-AUC=1.00000 | @0.5: acc=100.0000% recall=100.0000% precision=100.0000% FP=0 FN=0 | recall@0.1%FPR=100.0000% recall@1%FPR=100.0000%
+
+=== STRESS TEST: phishing rows in each held-out fold are 'upgraded', models are NOT retrained ===
+ratio-formula check: max|LetterRatio - letters/URLLength|=0.0005  max|SpecialRatio - specials/URLLength|=0.2958
+url       | L0 today (as observed)                                               caught(all)=99.5265% | look-alike URL=98.3548% | login=99.9197% | @0.5=99.4648%
+url       | L1 + HTTPS (free certificate)                                        caught(all)=84.0130% | look-alike URL=98.3548% | login=99.6587% | @0.5=77.5016%
+url       | L2 + trust badges (title, favicon, description, copyright, social)   caught(all)=84.0130% | look-alike URL=98.3548% | login=99.6587% | @0.5=77.5016%
+url       | L3 full page clone (title still mismatched)                          caught(all)=84.0130% | look-alike URL=98.3548% | login=99.6587% | @0.5=77.5016%
+url       | L4 full page clone + matching title                                  caught(all)=84.0130% | look-alike URL=98.3548% | login=99.6587% | @0.5=77.5016%
+page      | L0 today (as observed)                                               caught(all)=99.7237% | look-alike URL=99.9080% | login=99.2773% | @0.5=99.7421%
+page      | L1 + HTTPS (free certificate)                                        caught(all)=99.7237% | look-alike URL=99.9080% | login=99.2773% | @0.5=99.7421%
+page      | L2 + trust badges (title, favicon, description, copyright, social)   caught(all)=93.4410% | look-alike URL=88.1462% | login=87.7936% | @0.5=94.2535%
+page      | L3 full page clone (title still mismatched)                          caught(all)=0.4778% | look-alike URL=0.3988% | login=0.9034% | @0.5=0.5320%
+page      | L4 full page clone + matching title                                  caught(all)=0.0943% | look-alike URL=0.0844% | login=0.1004% | @0.5=0.1062%
+combined  | L0 today (as observed)                                               caught(all)=99.9967% | look-alike URL=99.9885% | login=100.0000% | @0.5=99.9902%
+combined  | L1 + HTTPS (free certificate)                                        caught(all)=99.8180% | look-alike URL=99.9885% | login=99.8795% | @0.5=99.5287%
+combined  | L2 + trust badges (title, favicon, description, copyright, social)   caught(all)=99.5125% | look-alike URL=99.9617% | login=99.7390% | @0.5=99.0368%
+combined  | L3 full page clone (title still mismatched)                          caught(all)=48.0813% | look-alike URL=55.3497% | login=90.2429% | @0.5=31.6327%
+combined  | L4 full page clone + matching title                                  caught(all)=46.9751% | look-alike URL=52.7458% | login=89.1387% | @0.5=29.4984%
+either    | L0 today (as observed)                                               caught(all)=99.9978% | look-alike URL=99.9923% | login=100.0000%  (legit FPR=0.0899%)
+either    | L1 + HTTPS (free certificate)                                        caught(all)=99.8440% | look-alike URL=99.9923% | login=99.8795%  (legit FPR=0.0899%)
+either    | L2 + trust badges (title, favicon, description, copyright, social)   caught(all)=99.6241% | look-alike URL=99.9578% | login=99.8394%  (legit FPR=0.0899%)
+either    | L3 full page clone (title still mismatched)                          caught(all)=80.6371% | look-alike URL=98.2436% | login=99.5583%  (legit FPR=0.0899%)
+either    | L4 full page clone + matching title                                  caught(all)=80.6197% | look-alike URL=98.2398% | login=99.5583%  (legit FPR=0.0899%)
+
+=== BASE RATES: per 1,000,000 URLs, threshold at <=0.1% legit false-positive rate ===
+url       prevalence= 42.77%: caught=   425,696 missed= 2,025.1 false alarms=   556.1 precision=99.870% (false alarms per real catch=0.001)
+url       prevalence=  5.00%: caught=    49,763 missed=   236.7 false alarms=   923.1 precision=98.179% (false alarms per real catch=0.019)
+url       prevalence=  1.00%: caught=     9,953 missed=    47.3 false alarms=   962.0 precision=91.186% (false alarms per real catch=0.097)
+url       prevalence=  0.10%: caught=       995 missed=     4.7 false alarms=   970.7 precision=50.624% (false alarms per real catch=0.975)
+page      prevalence= 42.77%: caught=   426,539 missed= 1,181.7 false alarms=   565.4 precision=99.868% (false alarms per real catch=0.001)
+page      prevalence=  5.00%: caught=    49,862 missed=   138.1 false alarms=   938.5 precision=98.153% (false alarms per real catch=0.019)
+page      prevalence=  1.00%: caught=     9,972 missed=    27.6 false alarms=   978.0 precision=91.069% (false alarms per real catch=0.098)
+page      prevalence=  0.10%: caught=       997 missed=     2.8 false alarms=   986.9 precision=50.260% (false alarms per real catch=0.990)
+combined  prevalence= 42.77%: caught=   427,707 missed=    13.9 false alarms=   421.7 precision=99.902% (false alarms per real catch=0.001)
+combined  prevalence=  5.00%: caught=    49,998 missed=     1.6 false alarms=   700.0 precision=98.619% (false alarms per real catch=0.014)
+combined  prevalence=  1.00%: caught=    10,000 missed=     0.3 false alarms=   729.5 precision=93.201% (false alarms per real catch=0.073)
+combined  prevalence=  0.10%: caught=     1,000 missed=     0.0 false alarms=   736.1 precision=57.598% (false alarms per real catch=0.736)
+
+=== TRIAGE FUNNEL (stage 1 = URL-only score, stage 2 = URL+page score for the grey zone) ===
+budgets: block-zone legit<= 0.00%, allow-zone phishing<= 0.10% -> thresholds allow<0.0016 block>0.9950
+   stage1: BLOCK 42.35% of URLs (phish 91381, legit 0) | ALLOW 30.65% (legit 66044, phish 93) | GREY 27.01% (legit 57451, phish 826)
+   stage2 on grey: blocked phish 821, blocked legit 4, allowed phish 5, allowed legit 57447
+   END-TO-END: missed phishing 98 (0.1062%), legit blocked 4 (0.0032%); pages that needed fetching: 27.01%
+budgets: block-zone legit<= 0.01%, allow-zone phishing<= 0.10% -> thresholds allow<0.0016 block>0.8448
+   stage1: BLOCK 42.51% of URLs (phish 91722, legit 13) | ALLOW 30.65% (legit 66044, phish 93) | GREY 26.84% (legit 57438, phish 485)
+   stage2 on grey: blocked phish 482, blocked legit 4, allowed phish 3, allowed legit 57434
+   END-TO-END: missed phishing 96 (0.1040%), legit blocked 17 (0.0138%); pages that needed fetching: 26.84%
+budgets: block-zone legit<= 0.01%, allow-zone phishing<= 0.05% -> thresholds allow<0.0009 block>0.8448
+   stage1: BLOCK 42.51% of URLs (phish 91722, legit 13) | ALLOW 19.22% (legit 41427, phish 47) | GREY 38.27% (legit 82055, phish 531)
+   stage2 on grey: blocked phish 527, blocked legit 4, allowed phish 4, allowed legit 82051
+   END-TO-END: missed phishing 51 (0.0553%), legit blocked 17 (0.0138%); pages that needed fetching: 38.27%
+budgets: block-zone legit<= 0.10%, allow-zone phishing<= 0.10% -> thresholds allow<0.0016 block>0.2146
+   stage1: BLOCK 42.63% of URLs (phish 91863, legit 124) | ALLOW 30.65% (legit 66044, phish 93) | GREY 26.72% (legit 57327, phish 344)
+   stage2 on grey: blocked phish 342, blocked legit 4, allowed phish 2, allowed legit 57323
+   END-TO-END: missed phishing 95 (0.1029%), legit blocked 128 (0.1036%); pages that needed fetching: 26.72%
+
+=== SHAP (combined GBM, fold-0 hold-out, 20k rows): mean |SHAP| in log-odds ===
+                   feature  mean_abs_shap tier  corr_value_shap    share
+                LineOfCode       3.218728 PAGE        -0.239761 0.202490
+               NoOfSelfRef       2.593597 PAGE        -0.436586 0.163163
+           NoOfExternalRef       1.709696 PAGE        -0.339125 0.107557
+                   IsHTTPS       1.646758  URL        -0.978714 0.103598
+                 NoOfImage       0.925451 PAGE        -0.352626 0.058220
+          LetterRatioInURL       0.691909  URL         0.847686 0.043528
+NoOfOtherSpecialCharsInURL       0.610911  URL         0.687744 0.038432
+         LargestLineLength       0.514269 PAGE         0.170648 0.032353
+              HasSocialNet       0.470050 PAGE        -0.969989 0.029571
+            HasDescription       0.452393 PAGE        -0.939973 0.028460
+           NoOfDegitsInURL       0.373104  URL         0.456284 0.023472
+             NoOfSubDomain       0.361405  URL        -0.602421 0.022736
+                    NoOfJS       0.354663 PAGE        -0.551325 0.022312
+     SpacialCharRatioInURL       0.289798  URL         0.902332 0.018231
+          HasCopyrightInfo       0.212548 PAGE        -0.882662 0.013371
+                 URLLength       0.177881  URL         0.514622 0.011190
+           DegitRatioInURL       0.165840  URL         0.808247 0.010433
+                   NoOfCSS       0.160081 PAGE        -0.374882 0.010071
+                HasFavicon       0.152778 PAGE        -0.976896 0.009611
+               URLCharProb       0.150030  URL        -0.842991 0.009438
+          NoOfLettersInURL       0.139669  URL         0.467815 0.008787
+         TLDLegitimateProb       0.102293  URL        -0.443795 0.006435
+     DomainTitleMatchScore       0.063880 PAGE        -0.889924 0.004019
+              NoOfEmptyRef       0.062281 PAGE        -0.058693 0.003918
+              DomainLength       0.061844  URL        -0.587896 0.003891
+share of total |SHAP| by tier:
+ tier
+PAGE    0.694052
+URL     0.305948
+Name: share, dtype: float64
+
+SHAP top-10 for [url] model:
+                    feature  mean_abs_shap    share
+                   IsHTTPS       3.624591 0.241472
+              DomainLength       2.574187 0.171493
+          LetterRatioInURL       2.254033 0.150165
+NoOfOtherSpecialCharsInURL       1.614294 0.107545
+                 URLLength       1.414575 0.094240
+           NoOfDegitsInURL       0.752084 0.050104
+          NoOfLettersInURL       0.509675 0.033955
+     SpacialCharRatioInURL       0.458001 0.030512
+         TLDLegitimateProb       0.408164 0.027192
+               URLCharProb       0.325405 0.021679
+
+SHAP top-10 for [page] model:
+               feature  mean_abs_shap    share
+           LineOfCode       4.463085 0.282079
+          NoOfSelfRef       2.017250 0.127496
+      NoOfExternalRef       1.574912 0.099539
+            NoOfImage       1.298997 0.082100
+DomainTitleMatchScore       1.208679 0.076392
+         HasSocialNet       0.975038 0.061625
+    LargestLineLength       0.874201 0.055252
+               NoOfJS       0.683717 0.043213
+       HasDescription       0.555915 0.035135
+     HasCopyrightInfo       0.514683 0.032529
+
+DONE in 134s
